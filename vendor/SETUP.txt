@@ -1,0 +1,22 @@
+SELF-HOSTED REACT — one-time setup
+===================================
+
+index.html loads React from this vendor/ folder (same-origin) instead of a CDN.
+Download the two pinned files into this folder, then upload the whole site.
+
+From inside the deploy/ folder, run:
+
+    mkdir -p vendor
+    curl -L -o vendor/react.production.min.js \
+      https://unpkg.com/react@18.3.1/umd/react.production.min.js
+    curl -L -o vendor/react-dom.production.min.js \
+      https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js
+
+That's it. Upload index.html, .htaccess, and the vendor/ folder.
+
+Verify (optional): open the site, DevTools > Network, reload. You should see
+react.production.min.js and react-dom.production.min.js loading from your domain
+(your server) — and NO requests to unpkg.com.
+
+Note: until these two files exist on the server, the page still works but falls
+back to loading React from unpkg.com. Once present, nothing loads off-site.
