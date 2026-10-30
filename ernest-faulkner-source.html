@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<title>Ernest-Faulkner Engine — editorial judgment from a machine with a human editor’s mindset</title>
+<meta name="description" content="Most AI writing tools rewrite first and justify later. Ernest-Faulkner weighs what a passage costs the reader, what the writer gains, argues for leaving it alone, and only intervenes when the evidence is strong enough.">
+<template id="__bundler_thumbnail" data-bg-color="#F3F0E8">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="430,560 600,250 770,560" fill="#F0B323"/>
+    <rect x="560" y="330" width="210" height="10" fill="#D63A2F"/>
+    <rect x="430" y="560" width="340" height="12" fill="#1B1B1B"/>
+  </svg>
+</template>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"><style>body{margin:0;background:#F3F0E8;font-family:Jost,sans-serif;color:#1B1B1B}a{color:#2452A6}a:hover{color:#D63A2F}@media print{[data-artboard]{zoom:1!important}}</style></helmet>
+<div data-artboard style="zoom:{{ zoom }};width:1080px;margin:0 auto;background:#F3F0E8;color:#1B1B1B;font-family:Jost,sans-serif">
+
+<div data-screen-label="Hero" style="position:relative;overflow:hidden;padding:62px 56px 76px 112px">
+<div style="position:absolute;left:0;top:0;right:0;height:26px;background:#1B1B1B"></div>
+<div style="position:absolute;left:72px;top:26px;bottom:0;width:8px;background:#1B1B1B"></div>
+<div style="display:flex;align-items:center;justify-content:space-between;gap:24px">
+<div style="display:flex;align-items:center;gap:14px;white-space:nowrap">
+<svg width="34" height="24"><path d="M4 22 L17 3 L30 22" style="fill:none;stroke:#1B1B1B;stroke-width:6px"></path></svg>
+<span style="font:600 15px/1 Jost,sans-serif;letter-spacing:.42em">ATMA</span>
+<span style="margin-left:8px;font:500 10px/1 Jost,sans-serif;letter-spacing:.24em;color:#5b5955">MARKETER · AUTHOR · SYSTEMS ENGINEER</span>
+</div>
+<a href="/atma_os.html" style="display:flex;align-items:center;gap:10px;font:500 10px/1 Jost,sans-serif;letter-spacing:.24em;color:#1B1B1B;text-decoration:none;white-space:nowrap"><span style="width:14px;height:12px;background:#F0B323;clip-path:polygon(50% 0,100% 100%,0 100%)"></span>ATMAOS · AUTHOR BRANCH</a>
+</div>
+<div style="margin-top:72px;font:500 13px/1 Jost,sans-serif;letter-spacing:.28em;text-transform:uppercase">a new class of machine-driven editorial intelligence</div>
+<h1 style="margin:22px 0 0 -6px;font:700 116px/.9 Jost,sans-serif;letter-spacing:-.035em">ernest<span style="color:#D63A2F">-</span>faulkner<br>engine</h1>
+<div style="margin-top:56px;display:grid;grid-template-columns:minmax(0,1fr) 520px;gap:40px;align-items:start">
+<div>
+<div style="width:120px;height:8px;background:#D63A2F"></div>
+<div style="margin-top:28px;font:500 28px/1.2 Jost,sans-serif;letter-spacing:-.01em">not AI writing and editing. <strong style="font-weight:700;color:#D63A2F">editorial judgment</strong> — from a machine with a human editor’s mindset.</div>
+<p style="margin:28px 0 0;font:400 17px/1.5 Jost,sans-serif">Most AI writing tools rewrite first and justify later. Ernest-Faulkner does the opposite. It analyzes what a passage costs the reader, what the writer gains from that choice, argues for leaving it alone, and only recommends intervention when the evidence is strong enough.</p>
+<div style="margin-top:36px;display:flex;flex-direction:column;gap:12px;font:400 15px/1.3 Jost,sans-serif">
+<div style="display:flex;align-items:center;gap:10px"><span style="flex:none;width:14px;height:14px;border-radius:50%;background:#2452A6"></span><span><strong style="font-weight:600">how it thinks</strong> <span style="color:#5b5955">sections 1–8</span></span></div>
+<div style="display:flex;align-items:center;gap:10px"><span style="flex:none;width:14px;height:14px;background:#D63A2F"></span><span><strong style="font-weight:600">how it is built</strong> <span style="color:#5b5955">9–13</span></span></div>
+<div style="display:flex;align-items:center;gap:10px"><span style="flex:none;width:16px;height:14px;background:#F0B323;clip-path:polygon(50% 0,100% 100%,0 100%)"></span><span><strong style="font-weight:600">the difference</strong> <span style="color:#5b5955">14</span></span></div>
+</div>
+</div>
+<div>
+<div style="position:relative;width:520px;height:520px">
+<div style="position:absolute;right:-96px;top:-64px;width:300px;height:260px;background:#F0B323;clip-path:polygon(50% 0,100% 100%,0 100%)"></div>
+<sc-if value="{{ imgOriginal }}" hint-placeholder-val="{{ true }}"><img src="../assets/ernest-faulkner-engine.jpg" alt="Illustration of Ernest Hemingway and William Faulkner seated in conversation, Faulkner with mechanical legs, over a grid of lines" style="position:relative;display:block;width:520px;height:520px"></sc-if>
+<sc-if value="{{ imgMono }}" hint-placeholder-val="{{ false }}"><img src="../assets/ernest-faulkner-engine.jpg" alt="Illustration of Ernest Hemingway and William Faulkner seated in conversation, Faulkner with mechanical legs, over a grid of lines" style="position:relative;display:block;width:520px;height:520px;filter:grayscale(1) contrast(1.08)"></sc-if>
+<sc-if value="{{ imgDuotone }}" hint-placeholder-val="{{ false }}"><div style="position:relative;width:520px;height:520px;background:#2452A6"><img src="../assets/ernest-faulkner-engine.jpg" alt="Illustration of Ernest Hemingway and William Faulkner seated in conversation, Faulkner with mechanical legs, over a grid of lines" style="display:block;width:520px;height:520px;filter:grayscale(1) contrast(1.2);mix-blend-mode:multiply"></div></sc-if>
+</div>
+<div style="margin-top:14px;display:flex;gap:12px;align-items:flex-start;font:400 14px/1.4 Jost,sans-serif;color:#5b5955"><span style="flex:none;width:24px;height:3px;background:#1B1B1B;margin-top:9px"></span><span>Ernest Hemingway and William Faulkner — compression and accumulation, in one conversation.</span></div>
+</div>
+</div>
+</div>
+
+<div data-screen-label="The four numbers" style="padding:64px 112px 72px;border-top:8px solid #1B1B1B">
+<div style="display:flex;align-items:center;gap:14px;margin-bottom:28px"><span style="width:30px;height:26px;background:#1B1B1B;clip-path:polygon(50% 0,100% 100%,0 100%)"></span><span style="font:500 13px/1 Jost,sans-serif;letter-spacing:.28em;text-transform:uppercase">the four numbers</span></div>
+<div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:3px solid #1B1B1B;border-left:3px solid #1B1B1B">
+<div style="border-right:3px solid #1B1B1B;border-bottom:3px solid #1B1B1B;padding:24px 20px 26px;display:flex;flex-direction:column;gap:14px"><div style="font:700 88px/.9 Jost,sans-serif;letter-spacing:-.05em;color:#2452A6">10</div><div style="font:600 19px/1.15 Jost,sans-serif">competing editorial forces</div><div style="font:400 14px/1.45 Jost,sans-serif">Ernest-Faulkner judges 10 fundamental writing tensions — clarity vs. implication, simplicity vs. necessary complexity, restraint vs. emotional force, economy vs. resonance, and more.</div><div style="margin-top:auto;padding-top:14px;border-top:2px solid #1B1B1B"><div style="font:500 11px/1 Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#5b5955;margin-bottom:8px">why it matters</div><div style="font:500 15px/1.35 Jost,sans-serif">It doesn’t apply style rules. It weighs tradeoffs.</div></div></div>
+<div style="border-right:3px solid #1B1B1B;border-bottom:3px solid #1B1B1B;padding:24px 20px 26px;display:flex;flex-direction:column;gap:14px"><div style="font:700 88px/.9 Jost,sans-serif;letter-spacing:-.05em;color:#D63A2F">15</div><div style="font:600 19px/1.15 Jost,sans-serif">ways writing can actually fail</div><div style="font:400 14px/1.45 Jost,sans-serif">Not “bad grammar.” Fifteen families of editorial failure covering meaning, logic, evidence, agency, structure, voice, rhythm, context, and integrity.</div><div style="margin-top:auto;padding-top:14px;border-top:2px solid #1B1B1B"><div style="font:500 11px/1 Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#5b5955;margin-bottom:8px">why it matters</div><div style="font:500 15px/1.35 Jost,sans-serif">It looks for what is actually wrong — not what merely looks unusual.</div></div></div>
+<div style="border-right:3px solid #1B1B1B;border-bottom:3px solid #1B1B1B;padding:24px 20px 26px;display:flex;flex-direction:column;gap:14px"><div style="font:700 88px/.9 Jost,sans-serif;letter-spacing:-.05em;color:#1B1B1B">120</div><div style="font:600 19px/1.15 Jost,sans-serif">gold-standard editorial tests</div><div style="font:400 14px/1.45 Jost,sans-serif">The first evaluation corpus contains 120 difficult cases designed to test judgment, including good writing that conventional AI editors would wrongly “fix.”</div><div style="margin-top:auto;padding-top:14px;border-top:2px solid #1B1B1B"><div style="font:500 11px/1 Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#5b5955;margin-bottom:8px">why it matters</div><div style="font:500 15px/1.35 Jost,sans-serif">The machine is tested on when to edit — and when to leave the writing alone.</div></div></div>
+<div style="border-right:3px solid #1B1B1B;border-bottom:3px solid #1B1B1B;padding:24px 20px 26px;display:flex;flex-direction:column;gap:14px;background:#F0B323"><div style="font:700 88px/.9 Jost,sans-serif;letter-spacing:-.05em;color:#1B1B1B">30</div><div style="font:600 19px/1.15 Jost,sans-serif">context-reversal tests</div><div style="font:400 14px/1.45 Jost,sans-serif">Same or nearly identical words. Different context. Different correct editorial decision.</div><div style="margin-top:auto;padding-top:14px;border-top:2px solid #1B1B1B"><div style="font:500 11px/1 Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#1B1B1B;margin-bottom:8px">why it matters</div><div style="font:500 15px/1.35 Jost,sans-serif">It doesn’t judge the sentence. It judges the sentence in context.</div></div></div>
+</div>
+</div>
+
+<div data-screen-label="1 The problem" style="padding:72px 112px 80px;border-top:8px solid #1B1B1B">
+<div style="display:flex;align-items:center;gap:14px;margin-bottom:28px"><span style="width:30px;height:30px;border-radius:50%;background:#1B1B1B;color:#F3F0E8;display:flex;align-items:center;justify-content:center;font:600 13px/1 Jost,sans-serif">1</span><span style="font:500 13px/1 Jost,sans-serif;letter-spacing:.28em;text-transform:uppercase">the problem</span></div>
+<h2 style="margin:0 0 18px;font:700 64px/1.02 Jost,sans-serif;letter-spacing:-.03em">most AI writing tools are<br>built to rewrite your words.</h2>
+<p style="margin:0 0 48px;max-width:700px;font:400 19px/1.5 Jost,sans-serif">You give them a paragraph. They make it shorter, smoother, clearer, or more polished. That sounds useful. But it creates a serious problem: the AI often starts writing the way it thinks good writing should sound.</p>
+<div style="font:500 11px/1 Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase;margin-bottom:16px">what the rewrite does</div>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:3px solid #1B1B1B;border-left:3px solid #1B1B1B">
+<div style="border-right:3px solid #1B1B1B;border-bottom:3px solid #1B1B1B;padding:24px 24px 26px;display:flex;flex-direction:column;gap:18px"><div style="height:42px;display:flex;align-items:center;gap:14px"><div style="display:flex;gap:4px;align-items:flex-end"><div style="width:9px;height:26px;background:#1B1B1B"></div><div style="width:9px;height:26px;background:#1B1B1B"></div><div style="width:9px;height:40px;background:#D63A2F"></div><div style="width:9px;height:26px;background:#1B1B1B"></div></div><svg width="26" height="14" style="flex:none"><path d="M0 7 H16" style="fill:none;stroke:#1B1B1B;stroke-width:3px"></path><path d="M14 1 L25 7 L14 13 Z" style="fill:#1B1B1B"></path></svg><div style="display:flex;gap:4px;align-items:flex-end"><div style="width:9px;height:26px;background:#1B1B1B"></div><div style="width:9px;height:26px;background:#1B1B1B"></div><div style="width:9px;height:26px;background:#1B1B1B"></div></div></div><div style="font:500 17px/1.35 Jost,sans-serif">It removes odd sentences.</div></div>
+<div style="border-right:3px solid #1B1B1B;border-bottom:3px solid #1B1B1B;padding:24px 24px 26px;display:flex;flex-direction:column;gap:18px"><div style="height:42px;display:flex;align-items:center;gap:14px"><div style="width:34px;height:34px;border:3px dashed #1B1B1B;box-sizing:border-box"></div><svg width="26" height="14" style="flex:none"><path d="M0 7 H16" style="fill:none;stroke:#1B1B1B;stroke-width:3px"></path><path d="M14 1 L25 7 L14 13 Z" style="fill:#1B1B1B"></path></svg><div style="display:flex;gap:5px;align-items:center"><div style="width:34px;height:34px;background:#1B1B1B"></div><div style="display:flex;flex-direction:column;gap:4px"><div style="width:26px;height:4px;background:#1B1B1B"></div><div style="width:20px;height:4px;background:#1B1B1B"></div><div style="width:24px;height:4px;background:#1B1B1B"></div></div></div></div><div style="font:500 17px/1.35 Jost,sans-serif">It explains things that were meant to stay implied.</div></div>
+<div style="border-right:3px solid #1B1B1B;border-bottom:3px solid #1B1B1B;padding:24px 24px 26px;display:flex;flex-direction:column;gap:18px"><div style="height:42px;display:flex;align-items:center;gap:14px"><div style="width:96px;height:8px;background:#1B1B1B"></div><svg width="26" height="14" style="flex:none"><path d="M0 7 H16" style="fill:none;stroke:#1B1B1B;stroke-width:3px"></path><path d="M14 1 L25 7 L14 13 Z" style="fill:#1B1B1B"></path></svg><div style="width:28px;height:8px;background:#1B1B1B"></div></div><div style="font:500 17px/1.35 Jost,sans-serif">It shortens long sentences that were working.</div></div>
+<div style="border-right:3px solid #1B1B1B;border-bottom:3px solid #1B1B1B;padding:24px 24px 26px;display:flex;flex-direction:column;gap:18px"><div style="height:42px;display:flex;align-items:center;gap:14px"><div style="width:34px;height:34px;background:#D63A2F"></div><svg width="26" height="14" style="flex:none"><path d="M0 7 H16" style="fill:none;stroke:#1B1B1B;stroke-width:3px"></path><path d="M14 1 L25 7 L14 13 Z" style="fill:#1B1B1B"></path></svg><div style="width:34px;height:34px;background:#c9c5ba"></div></div><div style="font:500 17px/1.35 Jost,sans-serif">It tones down anger.</div></div>
+<div style="border-right:3px solid #1B1B1B;border-bottom:3px solid #1B1B1B;padding:24px 24px 26px;display:flex;flex-direction:column;gap:18px"><div style="height:42px;display:flex;align-items:center;gap:14px"><div style="display:flex;gap:7px"><div style="width:22px;height:8px;background:#1B1B1B"></div><div style="width:12px;height:8px;background:#1B1B1B"></div><div style="width:28px;height:8px;background:#1B1B1B"></div></div><svg width="26" height="14" style="flex:none"><path d="M0 7 H16" style="fill:none;stroke:#1B1B1B;stroke-width:3px"></path><path d="M14 1 L25 7 L14 13 Z" style="fill:#1B1B1B"></path></svg><div style="width:76px;height:8px;background:#1B1B1B"></div></div><div style="font:500 17px/1.35 Jost,sans-serif">It cleans up fragments.</div></div>
+<div style="border-right:3px solid #1B1B1B;border-bottom:3px solid #1B1B1B;padding:24px 24px 26px;display:flex;flex-direction:column;gap:18px"><div style="height:42px;display:flex;align-items:center;gap:14px"><div style="width:38px;height:34px;background:#F0B323;clip-path:polygon(50% 0,100% 100%,0 100%)"></div><svg width="26" height="14" style="flex:none"><path d="M0 7 H16" style="fill:none;stroke:#1B1B1B;stroke-width:3px"></path><path d="M14 1 L25 7 L14 13 Z" style="fill:#1B1B1B"></path></svg><div style="width:34px;height:34px;border-radius:50%;background:#c9c5ba"></div></div><div style="font:500 17px/1.35 Jost,sans-serif">It replaces unusual words with safer ones.</div></div>
+</div>
+<div style="margin-top:40px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);border:3px solid #1B1B1B">
+<div style="padding:28px 30px;border-right:3px solid #1B1B1B"><div style="font:500 11px/1 Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#5b5955;margin-bottom:12px">the result may be</div><div style="font:600 32px/1.1 Jost,sans-serif;letter-spacing:-.02em">easier to read.</div></div>
+<div style="padding:28px 30px;background:#1B1B1B;color:#F3F0E8"><div style="font:500 11px/1 Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#a9a59b;margin-bottom:12px">it may also be</div><div style="font:600 32px/1.1 Jost,sans-serif;letter-spacing:-.02em">less interesting, less precise, less human — <span style="color:#F0B323">and less like you.</span></div></div>
+</div>
+<div style="margin-top:56px;background:#F0B323;padding:44px 48px 48px;position:relative">
+<div style="position:absolute;right:40px;top:40px;width:64px;height:56px;background:#1B1B1B;clip-path:polygon(50% 0,100% 100%,0 100%)"></div>
+<div style="font:500 11px/1 Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase;margin-bottom:20px">the idea it was built around</div>
+<div style="font:700 46px/1.06 Jost,sans-serif;letter-spacing:-.03em;max-width:680px">the AI should have to prove that something is wrong before it earns the right to change it.</div>
+<div style="margin-top:24px;font:500 19px/1.4 Jost,sans-serif">That sounds simple. It changes almost everything.</div>
+</div>
+</div>
+
+<div data-screen-label="2 Not a rewriting engine" style="padding:72px 112px 80px;border-top:8px solid #1B1B1B">
+<div style="display:flex;align-items:center;gap:14px;margin-bottom:28px"><span style="width:30px;height:30px;border-radius:50%;background:#1B1B1B;color:#F3F0E8;display:flex;align-items:center;justify-content:center;font:600 13px/1 Jost,sans-serif">2</span><span style="font:500 13px/1 Jost,sans-serif;letter-spacing:.28em;text-transform:uppercase">the first question</span></div>
+<h2 style="margin:0 0 44px;font:700 64px/1.02 Jost,sans-serif;letter-spacing:-.03em">it is not a<br>rewriting engine.</h2>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);border:3px solid #1B1B1B">
+<div style="padding:30px 32px 34px;border-right:3px solid #1B1B1B"><div style="display:flex;align-items:center;gap:10px;font:500 11px/1 Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#5b5955;margin-bottom:18px"><span style="width:12px;height:12px;background:#D63A2F"></span>it does not begin by asking</div><div style="font:600 34px/1.12 Jost,sans-serif;letter-spacing:-.02em;color:#5b5955;text-decoration:line-through;text-decoration-color:#D63A2F;text-decoration-thickness:4px">how can I improve this sentence?</div></div>
+<div style="padding:30px 32px 34px;background:#F0B323"><div style="display:flex;align-items:center;gap:10px;font:500 11px/1 Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase;margin-bottom:18px"><span style="width:14px;height:12px;background:#1B1B1B;clip-path:polygon(50% 0,100% 100%,0 100%)"></span>it begins by asking</div><div style="font:700 34px/1.12 Jost,sans-serif;letter-spacing:-.02em">is there actually a problem here?</div></div>
+</div>
+<div style="margin-top:56px;display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:40px;align-items:end">
+<div><div style="height:10px;background:#1B1B1B"></div><div style="margin-top:14px;font:600 20px/1.25 Jost,sans-serif">A long sentence is not automatically bad.</div></div>
+<div><div style="width:40px;height:10px;background:#1B1B1B"></div><div style="margin-top:14px;font:600 20px/1.25 Jost,sans-serif">A short sentence is not automatically good.</div></div>
+</div>
+<div style="margin-top:44px;border-top:3px solid #1B1B1B">
+<div style="display:grid;grid-template-columns:220px minmax(0,1fr) minmax(0,1fr);gap:24px;padding:14px 0;border-bottom:2px solid #1B1B1B;font:500 11px/1 Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase"><span></span><span style="display:flex;align-items:center;gap:8px"><span style="width:10px;height:10px;background:#D63A2F"></span>it can be a problem</span><span style="display:flex;align-items:center;gap:8px"><span style="width:10px;height:10px;border-radius:50%;background:#2452A6"></span>it can also be the point</span></div>
+<div style="display:grid;grid-template-columns:220px minmax(0,1fr) minmax(0,1fr);gap:24px;padding:18px 0;border-bottom:2px solid #1B1B1B;align-items:baseline"><div style="font:600 19px/1.25 Jost,sans-serif">repetition</div><div style="font:400 16px/1.45 Jost,sans-serif">It can be wasteful.</div><div style="font:400 16px/1.45 Jost,sans-serif">It can also create rhythm, pressure, humor, or emotion.</div></div>
+<div style="display:grid;grid-template-columns:220px minmax(0,1fr) minmax(0,1fr);gap:24px;padding:18px 0;border-bottom:2px solid #1B1B1B;align-items:baseline"><div style="font:600 19px/1.25 Jost,sans-serif">ambiguity</div><div style="font:400 16px/1.45 Jost,sans-serif">It can confuse the reader.</div><div style="font:400 16px/1.45 Jost,sans-serif">It can also be exactly what makes a scene work.</div></div>
+<div style="display:grid;grid-template-columns:220px minmax(0,1fr) minmax(0,1fr);gap:24px;padding:18px 0;border-bottom:2px solid #1B1B1B;align-items:baseline"><div style="font:600 19px/1.25 Jost,sans-serif">strong emotional language</div><div style="font:400 16px/1.45 Jost,sans-serif">It can be melodrama.</div><div style="font:400 16px/1.45 Jost,sans-serif">It can also be completely justified.</div></div>
+<div style="display:grid;grid-template-columns:220px minmax(0,1fr) minmax(0,1fr);gap:24px;padding:18px 0;border-bottom:2px solid #1B1B1B;align-items:baseline"><div style="font:600 19px/1.25 Jost,sans-serif">a difficult sentence</div><div style="font:400 16px/1.45 Jost,sans-serif">It can be badly written.</div><div style="font:400 16px/1.45 Jost,sans-serif">Or it can be carrying a difficult idea that should not be made falsely simple.</div></div>
+</div>
+<div style="margin-top:48px;display:grid;grid-template-columns:8px 1fr;gap:28px"><div style="background:#D63A2F"></div><div style="font:600 30px/1.2 Jost,sans-serif;letter-spacing:-.01em">the engine has to tell the difference.</div></div>
+</div>
+
+<div data-screen-label="3 Cost and gain" style="padding:72px 112px 80px;border-top:8px solid #1B1B1B">
+<div style="display:flex;align-items:center;gap:14px;margin-bottom:28px"><span style="width:30px;height:30px;border-radius:50%;background:#1B1B1B;color:#F3F0E8;display:flex;align-items:center;justify-content:center;font:600 13px/1 Jost,sans-serif">3</span><span style="font:500 13px/1 Jost,sans-serif;letter-spacing:.28em;text-transform:uppercase">cost and gain</span></div>
+<h2 style="margin:0 0 18px;font:700 64px/1.02 Jost,sans-serif;letter-spacing:-.03em">every editorial choice<br>has a cost and a gain.</h2>
+<p style="margin:0 0 40px;max-width:700px;font:400 19px/1.5 Jost,sans-serif">This is one of the main ideas behind the system. Every writing choice asks something from the reader. But the same choice may produce something valuable.</p>
+<div style="position:relative;height:330px">
+<div style="position:absolute;left:150px;top:48px;width:104px;height:104px;background:#D63A2F"></div>
+<div style="position:absolute;right:150px;top:48px;width:104px;height:104px;border-radius:50%;background:#2452A6"></div>
+<div style="position:absolute;left:110px;right:110px;top:152px;height:10px;background:#1B1B1B"></div>
+<div style="position:absolute;left:353px;top:162px;width:150px;height:128px;background:#F0B323;clip-path:polygon(50% 0,100% 100%,0 100%)"></div>
+<div style="position:absolute;left:0;right:0;top:290px;height:4px;background:#1B1B1B"></div>
+<div style="position:absolute;left:110px;top:184px;width:220px"><div style="font:600 22px/1.1 Jost,sans-serif">the cost</div><div style="margin-top:6px;font:400 15px/1.4 Jost,sans-serif;color:#5b5955">what the choice asks of the reader</div></div>
+<div style="position:absolute;right:110px;top:184px;width:220px;text-align:right"><div style="font:600 22px/1.1 Jost,sans-serif">the gain</div><div style="margin-top:6px;font:400 15px/1.4 Jost,sans-serif;color:#5b5955">what the choice may give back</div></div>
+<div style="position:absolute;left:0;right:0;top:308px;text-align:center;font:500 11px/1 Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase">the judgment</div>
+</div>
+<div style="margin-top:36px;border:3px solid #1B1B1B">
+<div style="display:grid;grid-template-columns:200px minmax(0,1fr) minmax(0,1fr);border-bottom:3px solid #1B1B1B;font:500 11px/1 Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase"><div style="padding:14px 20px;border-right:3px solid #1B1B1B">the choice</div><div style="padding:14px 20px;border-right:3px solid #1B1B1B;display:flex;align-items:center;gap:8px"><span style="width:10px;height:10px;background:#D63A2F"></span>what it may cost</div><div style="padding:14px 20px;display:flex;align-items:center;gap:8px"><span style="width:10px;height:10px;border-radius:50%;background:#2452A6"></span>what it may give back</div></div>
+<div style="display:grid;grid-template-columns:200px minmax(0,1fr) minmax(0,1fr);border-bottom:2px solid #1B1B1B"><div style="padding:18px 20px;border-right:3px solid #1B1B1B;font:600 18px/1.25 Jost,sans-serif">a long sentence</div><div style="padding:18px 20px;border-right:3px solid #1B1B1B;font:400 16px/1.45 Jost,sans-serif">may require more memory.</div><div style="padding:18px 20px;font:400 16px/1.45 Jost,sans-serif">may build pressure.</div></div>
+<div style="display:grid;grid-template-columns:200px minmax(0,1fr) minmax(0,1fr);border-bottom:2px solid #1B1B1B"><div style="padding:18px 20px;border-right:3px solid #1B1B1B;font:600 18px/1.25 Jost,sans-serif">a metaphor</div><div style="padding:18px 20px;border-right:3px solid #1B1B1B;font:400 16px/1.45 Jost,sans-serif">may require interpretation.</div><div style="padding:18px 20px;font:400 16px/1.45 Jost,sans-serif">may explain an idea better than literal language.</div></div>
+<div style="display:grid;grid-template-columns:200px minmax(0,1fr) minmax(0,1fr);border-bottom:2px solid #1B1B1B"><div style="padding:18px 20px;border-right:3px solid #1B1B1B;font:600 18px/1.25 Jost,sans-serif">a fragment</div><div style="padding:18px 20px;border-right:3px solid #1B1B1B;font:400 16px/1.45 Jost,sans-serif">may interrupt the rhythm.</div><div style="padding:18px 20px;font:400 16px/1.45 Jost,sans-serif">may create force.</div></div>
+<div style="display:grid;grid-template-columns:200px minmax(0,1fr) minmax(0,1fr)"><div style="padding:18px 20px;border-right:3px solid #1B1B1B;font:600 18px/1.25 Jost,sans-serif">a technical word</div><div style="padding:18px 20px;border-right:3px solid #1B1B1B;font:400 16px/1.45 Jost,sans-serif">may slow a general reader down.</div><div style="padding:18px 20px;font:400 16px/1.45 Jost,sans-serif">may be the only accurate word.</div></div>
+</div>
+<p style="margin:36px 0 0;max-width:700px;font:400 17px/1.5 Jost,sans-serif">So Ernest-Faulkner does not ask whether a writing choice has a cost. Almost every good writing choice has one.</p>
+<div style="margin-top:24px;background:#1B1B1B;color:#F3F0E8;padding:30px 36px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:32px;align-items:end">
+<div style="font:600 30px/1.18 Jost,sans-serif;letter-spacing:-.01em"><span style="color:#a9a59b">it asks:</span> does the value of the choice justify the cost?</div>
+<div style="font:500 11px/1.4 Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#F0B323;white-space:nowrap">that is editorial judgment.</div>
+</div>
+</div>
+
+<div data-screen-label="4 Argues against itself" style="padding:72px 112px 80px;border-top:8px solid #1B1B1B">
+<div style="display:flex;align-items:center;gap:14px;margin-bottom:28px"><span style="width:30px;height:30px;border-radius:50%;background:#1B1B1B;color:#F3F0E8;display:flex;align-items:center;justify-content:center;font:600 13px/1 Jost,sans-serif">4</span><span style="font:500 13px/1 Jost,sans-serif;letter-spacing:.28em;text-transform:uppercase">the case for no change</span></div>
+<h2 style="margin:0 0 18px;font:700 64px/1.02 Jost,sans-serif;letter-spacing:-.03em">the engine argues<br>against itself.</h2>
+<p style="margin:0 0 48px;max-width:700px;font:400 19px/1.5 Jost,sans-serif">Most AI systems are very good at finding reasons to change something once they have decided it looks unusual. Ernest-Faulkner is required to do the opposite. Before it recommends a meaningful change, it must make the strongest case it can for leaving the passage alone.</p>
+<div style="font:500 11px/1 Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase;margin-bottom:16px">that means the engine may say</div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr) 190px;border:3px solid #1B1B1B">
+<div style="padding:24px 24px 26px;border-right:3px solid #1B1B1B"><div style="display:flex;align-items:center;gap:8px;font:500 11px/1 Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#5b5955;margin-bottom:14px"><span style="width:10px;height:10px;background:#D63A2F"></span>the cost</div><div style="font:500 19px/1.4 Jost,sans-serif">This sentence is long and takes more effort to read.</div></div>
+<div style="padding:24px 24px 26px;border-right:3px solid #1B1B1B"><div style="display:flex;align-items:center;gap:8px;font:500 11px/1 Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#5b5955;margin-bottom:14px"><span style="width:10px;height:10px;border-radius:50%;background:#2452A6"></span>the case for leaving it</div><div style="font:500 19px/1.4 Jost,sans-serif">But the repeated structure makes the argument easier to follow, and the length creates a strong buildup.</div></div>
+<div style="padding:24px 22px 26px;background:#F0B323;display:flex;flex-direction:column;justify-content:space-between;gap:16px"><div style="font:500 11px/1 Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase">verdict</div><div style="font:700 26px/1.1 Jost,sans-serif;letter-spacing:-.01em">I would leave it alone.</div></div>
+</div>
+<div style="margin-top:16px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr) 190px;border:3px solid #1B1B1B">
+<div style="padding:24px 24px 26px;border-right:3px solid #1B1B1B"><div style="display:flex;align-items:center;gap:8px;font:500 11px/1 Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#5b5955;margin-bottom:14px"><span style="width:10px;height:10px;background:#D63A2F"></span>the cost</div><div style="font:500 19px/1.4 Jost,sans-serif">This phrase is ambiguous,</div></div>
+<div style="padding:24px 24px 26px;border-right:3px solid #1B1B1B"><div style="display:flex;align-items:center;gap:8px;font:500 11px/1 Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#5b5955;margin-bottom:14px"><span style="width:10px;height:10px;border-radius:50%;background:#2452A6"></span>the case for leaving it</div><div style="font:500 19px/1.4 Jost,sans-serif">but both meanings appear intentional and useful. Clarifying it would make the sentence easier to understand and less interesting.</div></div>
+<div style="padding:24px 22px 26px;background:#F0B323;display:flex;flex-direction:column;justify-content:space-between;gap:16px"><div style="font:500 11px/1 Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase">verdict</div><div style="font:700 26px/1.1 Jost,sans-serif;letter-spacing:-.01em">Keep it.</div></div>
+</div>
+<div style="margin-top:48px;background:#1B1B1B;color:#F3F0E8;padding:30px 36px;font:600 28px/1.25 Jost,sans-serif;letter-spacing:-.01em">the engine does not win by finding more errors.<br><span style="color:#F0B323">it wins by making better decisions.</span></div>
+</div>
+
+<div data-screen-label="5 Observation and judgment" style="padding:72px 112px 80px;border-top:8px solid #1B1B1B">
+<div style="display:flex;align-items:center;gap:14px;margin-bottom:28px"><span style="width:30px;height:30px;border-radius:50%;background:#1B1B1B;color:#F3F0E8;display:flex;align-items:center;justify-content:center;font:600 13px/1 Jost,sans-serif">5</span><span style="font:500 13px/1 Jost,sans-serif;letter-spacing:.28em;text-transform:uppercase">two separate steps</span></div>
+<h2 style="margin:0 0 18px;font:700 64px/1.02 Jost,sans-serif;letter-spacing:-.03em">it separates observation<br>from judgment.</h2>
+<p style="margin:0 0 44px;max-width:700px;font:400 19px/1.5 Jost,sans-serif">A normal style checker might detect passive voice — and then recommend active voice. Ernest-Faulkner separates those steps.</p>
+<div style="display:grid;grid-template-columns:200px auto 26px auto minmax(0,1fr);gap:16px;align-items:center;padding:20px 24px;border:3px solid #1B1B1B">
+<div style="font:500 11px/1.3 Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#5b5955">a normal style checker</div>
+<div style="display:flex;align-items:center;gap:10px;font:500 16px/1.2 Jost,sans-serif;white-space:nowrap"><span style="flex:none;width:14px;height:14px;border-radius:50%;border:3px solid #1B1B1B;box-sizing:border-box"></span>passive voice</div>
+<svg width="26" height="14"><path d="M0 7 H16" style="fill:none;stroke:#1B1B1B;stroke-width:3px"></path><path d="M14 1 L25 7 L14 13 Z" style="fill:#1B1B1B"></path></svg>
+<div style="display:flex;align-items:center;gap:10px;font:500 16px/1.2 Jost,sans-serif;white-space:nowrap"><span style="flex:none;width:14px;height:14px;background:#D63A2F"></span>use active voice</div>
+<div style="font:400 14px/1.4 Jost,sans-serif;color:#5b5955;text-align:right">the pattern is treated as a rule</div>
+</div>
+<div style="margin:40px 0 16px;display:flex;align-items:center;gap:10px;font:500 11px/1 Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase"><span style="width:14px;height:12px;background:#F0B323;clip-path:polygon(50% 0,100% 100%,0 100%)"></span>ernest-faulkner</div>
+<div style="display:grid;grid-template-columns:170px 44px 190px 52px minmax(0,1fr)">
+<div style="display:flex;align-items:center"><div style="width:100%;border:3px solid #1B1B1B;padding:18px 18px 20px;box-sizing:border-box"><div style="display:flex;align-items:center;gap:10px;margin-bottom:12px"><span style="width:16px;height:16px;border-radius:50%;background:#1B1B1B"></span><span style="font:500 11px/1 Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase">observation</span></div><div style="font:600 18px/1.25 Jost,sans-serif">Passive construction detected.</div></div></div>
+<div style="position:relative"><div style="position:absolute;left:0;right:12px;top:calc(50% - 2px);height:4px;background:#1B1B1B"></div><div style="position:absolute;right:0;top:calc(50% - 8px);width:0;height:0;border-top:8px solid transparent;border-bottom:8px solid transparent;border-left:13px solid #1B1B1B"></div></div>
+<div style="display:flex;align-items:center"><div style="width:100%;background:#F0B323;padding:18px 18px 20px;box-sizing:border-box"><div style="display:flex;align-items:center;gap:10px;margin-bottom:12px"><span style="width:18px;height:16px;background:#1B1B1B;clip-path:polygon(50% 0,100% 100%,0 100%)"></span><span style="font:500 11px/1 Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase">judgment</span></div><div style="font:600 18px/1.25 Jost,sans-serif">Does the missing actor matter?</div></div></div>
+<div style="position:relative"><div style="position:absolute;left:0;width:22px;top:calc(50% - 2px);height:4px;background:#1B1B1B"></div><div style="position:absolute;left:20px;right:0;top:25%;bottom:25%;border:4px solid #1B1B1B;border-right:none;box-sizing:border-box"></div></div>
+<div style="display:grid;grid-template-rows:1fr 1fr;border:3px solid #1B1B1B">
+<div style="padding:20px 22px 22px;border-bottom:3px solid #1B1B1B"><div style="font:600 19px/1.35 Jost,sans-serif">The samples were stored at −80°C.</div><div style="margin-top:6px;font:400 14px/1.45 Jost,sans-serif;color:#5b5955">The person who put them in the freezer may not matter at all.</div><div style="margin-top:14px;display:flex;align-items:center;gap:8px;font:600 16px/1 Jost,sans-serif"><span style="width:14px;height:14px;border-radius:50%;background:#2452A6"></span>leave it alone.</div></div>
+<div style="padding:20px 22px 22px"><div style="font:600 19px/1.35 Jost,sans-serif">The records were destroyed after the investigation began.</div><div style="margin-top:6px;font:400 14px/1.45 Jost,sans-serif;color:#5b5955">The missing actor may matter a great deal.</div><div style="margin-top:14px;display:flex;align-items:center;gap:8px;font:600 16px/1 Jost,sans-serif"><span style="width:14px;height:14px;background:#D63A2F"></span>now there may be a real agency problem.</div></div>
+</div>
+</div>
+<div style="margin-top:48px;display:grid;grid-template-columns:8px 1fr;gap:28px"><div style="background:#D63A2F"></div><div><div style="font:600 30px/1.2 Jost,sans-serif;letter-spacing:-.01em;max-width:720px">the same surface feature can produce opposite editorial judgments.</div><p style="margin:14px 0 0;font:400 17px/1.5 Jost,sans-serif">That is why the engine does not treat grammar patterns as rules.</p></div></div>
+</div>
+
+<div data-screen-label="6 Competing editorial forces" style="padding:72px 112px 80px;border-top:8px solid #1B1B1B">
+<div style="display:flex;align-items:center;gap:14px;margin-bottom:28px"><span style="width:30px;height:30px;border-radius:50%;background:#1B1B1B;color:#F3F0E8;display:flex;align-items:center;justify-content:center;font:600 13px/1 Jost,sans-serif">6</span><span style="font:500 13px/1 Jost,sans-serif;letter-spacing:.28em;text-transform:uppercase">ten editorial tensions</span></div>
+<h2 style="margin:0 0 18px;font:700 64px/1.02 Jost,sans-serif;letter-spacing:-.03em">it works through competing<br>editorial forces.</h2>
+<p style="margin:0 0 40px;max-width:700px;font:400 19px/1.5 Jost,sans-serif">The system is built around a set of editorial tensions. These are not sliders where the best answer is always somewhere in the middle.</p>
+<div style="position:relative;padding-top:40px">
+<div style="position:absolute;left:calc(50% - 1.5px);top:0;bottom:0;border-left:3px dashed #D63A2F"></div>
+<div style="position:absolute;left:calc(50% + 14px);top:2px;display:flex;align-items:center;gap:8px;font:500 11px/1 Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase;white-space:nowrap"><span style="width:10px;height:10px;background:#D63A2F"></span>the middle is not automatically right</div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) 300px minmax(0,1fr);gap:20px;align-items:center;padding:11px 0"><div style="text-align:right;font:500 19px/1.2 Jost,sans-serif">compression</div><div style="display:flex;align-items:center"><span style="flex:none;width:16px;height:16px;background:#1B1B1B"></span><span style="flex:1;height:4px;background:#1B1B1B"></span><span style="flex:none;width:16px;height:16px;border-radius:50%;background:#1B1B1B"></span></div><div style="font:500 19px/1.2 Jost,sans-serif">accumulation</div></div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) 300px minmax(0,1fr);gap:20px;align-items:center;padding:11px 0"><div style="text-align:right;font:500 19px/1.2 Jost,sans-serif">explicitness</div><div style="display:flex;align-items:center"><span style="flex:none;width:16px;height:16px;background:#1B1B1B"></span><span style="flex:1;height:4px;background:#1B1B1B"></span><span style="flex:none;width:16px;height:16px;border-radius:50%;background:#1B1B1B"></span></div><div style="font:500 19px/1.2 Jost,sans-serif">implication</div></div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) 300px minmax(0,1fr);gap:20px;align-items:center;padding:11px 0"><div style="text-align:right;font:500 19px/1.2 Jost,sans-serif">precision</div><div style="display:flex;align-items:center"><span style="flex:none;width:16px;height:16px;background:#1B1B1B"></span><span style="flex:1;height:4px;background:#1B1B1B"></span><span style="flex:none;width:16px;height:16px;border-radius:50%;background:#1B1B1B"></span></div><div style="font:500 19px/1.2 Jost,sans-serif">productive ambiguity</div></div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) 300px minmax(0,1fr);gap:20px;align-items:center;padding:11px 0"><div style="text-align:right;font:500 19px/1.2 Jost,sans-serif">speed</div><div style="display:flex;align-items:center"><span style="flex:none;width:16px;height:16px;background:#1B1B1B"></span><span style="flex:1;height:4px;background:#1B1B1B"></span><span style="flex:none;width:16px;height:16px;border-radius:50%;background:#1B1B1B"></span></div><div style="font:500 19px/1.2 Jost,sans-serif">immersion</div></div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) 300px minmax(0,1fr);gap:20px;align-items:center;padding:11px 0"><div style="text-align:right;font:500 19px/1.2 Jost,sans-serif">simplicity</div><div style="display:flex;align-items:center"><span style="flex:none;width:16px;height:16px;background:#1B1B1B"></span><span style="flex:1;height:4px;background:#1B1B1B"></span><span style="flex:none;width:16px;height:16px;border-radius:50%;background:#1B1B1B"></span></div><div style="font:500 19px/1.2 Jost,sans-serif">necessary complexity</div></div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) 300px minmax(0,1fr);gap:20px;align-items:center;padding:11px 0"><div style="text-align:right;font:500 19px/1.2 Jost,sans-serif">regularity</div><div style="display:flex;align-items:center"><span style="flex:none;width:16px;height:16px;background:#1B1B1B"></span><span style="flex:1;height:4px;background:#1B1B1B"></span><span style="flex:none;width:16px;height:16px;border-radius:50%;background:#1B1B1B"></span></div><div style="font:500 19px/1.2 Jost,sans-serif">disruption</div></div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) 300px minmax(0,1fr);gap:20px;align-items:center;padding:11px 0"><div style="text-align:right;font:500 19px/1.2 Jost,sans-serif">restraint</div><div style="display:flex;align-items:center"><span style="flex:none;width:16px;height:16px;background:#1B1B1B"></span><span style="flex:1;height:4px;background:#1B1B1B"></span><span style="flex:none;width:16px;height:16px;border-radius:50%;background:#1B1B1B"></span></div><div style="font:500 19px/1.2 Jost,sans-serif">emotional force</div></div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) 300px minmax(0,1fr);gap:20px;align-items:center;padding:11px 0"><div style="text-align:right;font:500 19px/1.2 Jost,sans-serif">linear progression</div><div style="display:flex;align-items:center"><span style="flex:none;width:16px;height:16px;background:#1B1B1B"></span><span style="flex:1;height:4px;background:#1B1B1B"></span><span style="flex:none;width:16px;height:16px;border-radius:50%;background:#1B1B1B"></span></div><div style="font:500 19px/1.2 Jost,sans-serif">associative movement</div></div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) 300px minmax(0,1fr);gap:20px;align-items:center;padding:11px 0"><div style="text-align:right;font:500 19px/1.2 Jost,sans-serif">transparency</div><div style="display:flex;align-items:center"><span style="flex:none;width:16px;height:16px;background:#1B1B1B"></span><span style="flex:1;height:4px;background:#1B1B1B"></span><span style="flex:none;width:16px;height:16px;border-radius:50%;background:#1B1B1B"></span></div><div style="font:500 19px/1.2 Jost,sans-serif">textural richness</div></div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) 300px minmax(0,1fr);gap:20px;align-items:center;padding:11px 0"><div style="text-align:right;font:500 19px/1.2 Jost,sans-serif">economy</div><div style="display:flex;align-items:center"><span style="flex:none;width:16px;height:16px;background:#1B1B1B"></span><span style="flex:1;height:4px;background:#1B1B1B"></span><span style="flex:none;width:16px;height:16px;border-radius:50%;background:#1B1B1B"></span></div><div style="font:500 19px/1.2 Jost,sans-serif">resonance</div></div>
+</div>
+<div style="margin-top:56px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);border-top:3px solid #1B1B1B">
+<div style="padding:24px 28px 26px 0;border-right:3px solid #1B1B1B;border-bottom:3px solid #1B1B1B"><div style="height:26px;display:flex;align-items:center"><div style="width:36px;height:10px;background:#1B1B1B"></div></div><div style="margin-top:16px;font:500 18px/1.35 Jost,sans-serif">Sometimes the right sentence should be brutally short.</div></div>
+<div style="padding:24px 0 26px 28px;border-bottom:3px solid #1B1B1B"><div style="height:26px;display:flex;align-items:center"><div style="width:100%;height:10px;background:#1B1B1B"></div></div><div style="margin-top:16px;font:500 18px/1.35 Jost,sans-serif">Sometimes it should run for half a page.</div></div>
+<div style="padding:24px 28px 26px 0;border-right:3px solid #1B1B1B;border-bottom:3px solid #1B1B1B"><div style="height:26px;display:flex;align-items:center"><div style="width:26px;height:26px;background:#1B1B1B"></div></div><div style="margin-top:16px;font:500 18px/1.35 Jost,sans-serif">Sometimes the writer should explain the point clearly.</div></div>
+<div style="padding:24px 0 26px 28px;border-bottom:3px solid #1B1B1B"><div style="height:26px;display:flex;align-items:center"><div style="width:26px;height:26px;border:3px dashed #1B1B1B;box-sizing:border-box"></div></div><div style="margin-top:16px;font:500 18px/1.35 Jost,sans-serif">Sometimes explaining it would kill it.</div></div>
+<div style="padding:24px 28px 26px 0;border-right:3px solid #1B1B1B;border-bottom:3px solid #1B1B1B"><div style="height:26px;display:flex;align-items:center"><div style="width:26px;height:26px;border-radius:50%;border:2px solid #1B1B1B;box-sizing:border-box"></div></div><div style="margin-top:16px;font:500 18px/1.35 Jost,sans-serif">Sometimes the language should disappear so the reader sees only the information.</div></div>
+<div style="padding:24px 0 26px 28px;border-bottom:3px solid #1B1B1B"><div style="height:26px;display:flex;align-items:center"><div style="width:26px;height:26px;border-radius:50%;border:2px solid #1B1B1B;box-sizing:border-box;background:repeating-linear-gradient(45deg,#1B1B1B 0 3px,#F3F0E8 3px 7px)"></div></div><div style="margin-top:16px;font:500 18px/1.35 Jost,sans-serif">Sometimes the language itself is part of the experience.</div></div>
+</div>
+<div style="margin-top:40px;background:#1B1B1B;color:#F3F0E8;padding:30px 36px;font:600 26px/1.25 Jost,sans-serif;letter-spacing:-.01em">the engine asks what the passage is trying to do — and judges the choice against that purpose.</div>
+</div>
+
+<div data-screen-label="7 Context" style="padding:72px 112px 80px;border-top:8px solid #1B1B1B">
+<div style="display:flex;align-items:center;gap:14px;margin-bottom:28px"><span style="width:30px;height:30px;border-radius:50%;background:#1B1B1B;color:#F3F0E8;display:flex;align-items:center;justify-content:center;font:600 13px/1 Jost,sans-serif">7</span><span style="font:500 13px/1 Jost,sans-serif;letter-spacing:.28em;text-transform:uppercase">context</span></div>
+<h2 style="margin:0 0 18px;font:700 64px/1.02 Jost,sans-serif;letter-spacing:-.03em">context can completely<br>change the answer.</h2>
+<p style="margin:0 0 48px;max-width:700px;font:400 19px/1.5 Jost,sans-serif">Ernest-Faulkner does not judge sentences in a vacuum. Consider one sentence.</p>
+<div style="text-align:center;font:700 72px/1 Jost,sans-serif;letter-spacing:-.035em">“Mistakes were made.”</div>
+<svg width="856" height="80" style="display:block;margin:28px 0 0"><path d="M428 0 L214 78 M428 0 L642 78" style="fill:none;stroke:#1B1B1B;stroke-width:4px"></path></svg>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px">
+<div>
+<div style="border:3px solid #1B1B1B;background:#fff;padding:22px 24px 26px">
+<div style="display:flex;justify-content:space-between;align-items:center;padding-bottom:12px;border-bottom:3px solid #1B1B1B;margin-bottom:18px"><span style="font:600 12px/1 Jost,sans-serif;letter-spacing:.24em">STATEMENT</span><span style="width:12px;height:12px;background:#1B1B1B"></span></div>
+<div style="display:flex;flex-direction:column;gap:8px"><div style="height:5px;background:#c9c5ba;width:94%"></div><div style="height:5px;background:#c9c5ba;width:100%"></div><div style="height:5px;background:#c9c5ba;width:68%"></div></div>
+<div style="margin:16px 0"><span style="font:600 22px/1.3 Jost,sans-serif;border-bottom:4px solid #D63A2F">Mistakes were made.</span></div>
+<div style="display:flex;flex-direction:column;gap:8px"><div style="height:5px;background:#c9c5ba;width:100%"></div><div style="height:5px;background:#c9c5ba;width:86%"></div></div>
+</div>
+<div style="margin-top:20px;display:flex;align-items:flex-start;gap:12px"><span style="flex:none;width:18px;height:18px;background:#D63A2F;margin-top:2px"></span><div><div style="font:500 11px/1.3 Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#5b5955;margin-bottom:8px">a corporate statement after misconduct</div><div style="font:600 20px/1.25 Jost,sans-serif">agency problem.</div><div style="margin-top:6px;font:400 15px/1.45 Jost,sans-serif">The sentence may hide responsibility. That is a problem.</div></div></div>
+</div>
+<div>
+<div style="border:3px solid #1B1B1B;background:#fff;padding:22px 24px 26px">
+<div style="display:flex;justify-content:space-between;align-items:center;padding-bottom:12px;border-bottom:3px solid #1B1B1B;margin-bottom:18px"><span style="font:600 12px/1 Jost,sans-serif;letter-spacing:.24em">CHAPTER 9</span><span style="width:12px;height:12px;border-radius:50%;background:#1B1B1B"></span></div>
+<div style="display:flex;flex-direction:column;gap:8px"><div style="height:5px;background:#c9c5ba;width:100%"></div><div style="height:5px;background:#c9c5ba;width:90%"></div></div>
+<div style="margin:16px 0;font:500 20px/1.4 Jost,sans-serif"><span style="font-weight:600;border-bottom:4px solid #2452A6">“Mistakes were made,”</span> Daniel said, staring at the floor.</div>
+<div style="display:flex;flex-direction:column;gap:8px"><div style="height:5px;background:#c9c5ba;width:100%"></div><div style="height:5px;background:#c9c5ba;width:74%"></div></div>
+</div>
+<div style="margin-top:20px;display:flex;align-items:flex-start;gap:12px"><span style="flex:none;width:18px;height:18px;border-radius:50%;background:#2452A6;margin-top:2px"></span><div><div style="font:500 11px/1.3 Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#5b5955;margin-bottom:8px">a cowardly character in a novel</div><div style="font:600 20px/1.25 Jost,sans-serif">good characterization.</div><div style="margin-top:6px;font:400 15px/1.45 Jost,sans-serif">Now the hidden responsibility may be the whole point.</div></div></div>
+</div>
+</div>
+<div style="margin-top:56px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);border:3px solid #1B1B1B">
+<div style="padding:28px 30px;border-right:3px solid #1B1B1B;font:600 30px/1.15 Jost,sans-serif;letter-spacing:-.02em">the sentence did not change.</div>
+<div style="padding:28px 30px;background:#1B1B1B;color:#F3F0E8;font:600 30px/1.15 Jost,sans-serif;letter-spacing:-.02em">the context did.</div>
+</div>
+<p style="margin:28px 0 0;max-width:720px;font:400 17px/1.5 Jost,sans-serif">A real editor understands that. The engine is being designed to understand it too — its 30 context-reversal tests check exactly this: the same or nearly identical words, a different context, and a different correct editorial decision.</p>
+</div>
+
+<div data-screen-label="8 Voice" style="padding:72px 112px 80px;border-top:8px solid #1B1B1B">
+<div style="display:flex;align-items:center;gap:14px;margin-bottom:28px"><span style="width:30px;height:30px;border-radius:50%;background:#1B1B1B;color:#F3F0E8;display:flex;align-items:center;justify-content:center;font:600 13px/1 Jost,sans-serif">8</span><span style="font:500 13px/1 Jost,sans-serif;letter-spacing:.28em;text-transform:uppercase">voice</span></div>
+<h2 style="margin:0 0 18px;font:700 64px/1.02 Jost,sans-serif;letter-spacing:-.03em">it protects the writer<br>from the AI.</h2>
+<p style="margin:0 0 44px;max-width:700px;font:400 19px/1.5 Jost,sans-serif">AI is very good at producing language that sounds clean, balanced, professional, and reasonable. That is also how it can destroy a writer’s voice.</p>
+<div style="border-top:3px solid #1B1B1B">
+<div style="display:grid;grid-template-columns:minmax(0,1fr) 44px minmax(0,1fr);gap:24px;padding:14px 0;border-bottom:2px solid #1B1B1B;font:500 11px/1 Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase"><span style="display:flex;align-items:center;gap:8px"><span style="width:10px;height:10px;border-radius:50%;background:#2452A6"></span>the writer wrote</span><span></span><span style="display:flex;align-items:center;gap:8px"><span style="width:10px;height:10px;background:#D63A2F"></span>what AI can turn it into</span></div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) 44px minmax(0,1fr);gap:24px;padding:28px 0;border-bottom:2px solid #1B1B1B;align-items:center"><div style="font:700 44px/1.05 Jost,sans-serif;letter-spacing:-.03em">They lied.</div><svg width="44" height="20"><path d="M0 10 H30" style="fill:none;stroke:#1B1B1B;stroke-width:3px"></path><path d="M26 2 L42 10 L26 18 Z" style="fill:#1B1B1B"></path></svg><div style="font:400 22px/1.35 Jost,sans-serif;color:#5b5955;text-decoration:line-through;text-decoration-color:#D63A2F;text-decoration-thickness:3px">Their statements may not have been fully accurate.</div></div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) 44px minmax(0,1fr);gap:24px;padding:28px 0;border-bottom:2px solid #1B1B1B;align-items:center"><div style="font:700 44px/1.05 Jost,sans-serif;letter-spacing:-.03em">Ain’t nobody told me nothing.</div><svg width="44" height="20"><path d="M0 10 H30" style="fill:none;stroke:#1B1B1B;stroke-width:3px"></path><path d="M26 2 L42 10 L26 18 Z" style="fill:#1B1B1B"></path></svg><div style="font:400 22px/1.35 Jost,sans-serif;color:#5b5955;text-decoration:line-through;text-decoration-color:#D63A2F;text-decoration-thickness:3px">No one told me anything.</div></div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) 44px minmax(0,1fr);gap:24px;padding:24px 0;border-bottom:2px solid #1B1B1B;align-items:center"><div style="font:600 22px/1.3 Jost,sans-serif">a strange, memorable sentence</div><svg width="44" height="20"><path d="M0 10 H30" style="fill:none;stroke:#1B1B1B;stroke-width:3px"></path><path d="M26 2 L42 10 L26 18 Z" style="fill:#1B1B1B"></path></svg><div style="font:400 20px/1.35 Jost,sans-serif;color:#5b5955;text-decoration:line-through;text-decoration-color:#D63A2F;text-decoration-thickness:3px">a sentence that could have been written by anyone</div></div>
+</div>
+<p style="margin:36px 0 0;max-width:700px;font:400 17px/1.5 Jost,sans-serif">Ernest-Faulkner treats voice as something worth protecting.</p>
+<div style="margin-top:24px;display:flex;flex-direction:column;gap:6px">
+<div style="width:70%;background:#F0B323;padding:20px 28px;font:600 22px/1.25 Jost,sans-serif;box-sizing:border-box">a cleaner sentence is not automatically a better sentence.</div>
+<div style="width:85%;background:#D63A2F;color:#fff;padding:20px 28px;font:600 22px/1.25 Jost,sans-serif;box-sizing:border-box">a clearer sentence is not automatically better if the clarity destroys the intended experience.</div>
+<div style="width:100%;background:#2452A6;color:#fff;padding:20px 28px;font:600 22px/1.25 Jost,sans-serif;box-sizing:border-box">and a revision is never better if it becomes less true.</div>
+</div>
+</div>
+
+<div data-screen-label="Part two divider" style="background:#1B1B1B;color:#F3F0E8;padding:60px 112px;border-top:8px solid #1B1B1B;display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center">
+<div><div style="font:500 13px/1 Jost,sans-serif;letter-spacing:.28em;text-transform:uppercase;color:#F0B323;margin-bottom:18px">part two · how it is built</div><div style="font:700 44px/1.05 Jost,sans-serif;letter-spacing:-.03em">what keeps the machine from simply rewriting.</div></div>
+<p style="margin:0;font:400 17px/1.5 Jost,sans-serif;color:#d9d5cb">The process, the safeguards, the rules, and the tests behind the engine. Ernest-Faulkner is in development: its test corpus already exists and is growing, and the final editorial intelligence is being built against it.</p>
+</div>
+
+<div data-screen-label="9 The process" style="padding:72px 112px 80px;border-top:8px solid #1B1B1B">
+<div style="display:flex;align-items:center;gap:14px;margin-bottom:28px"><span style="width:30px;height:30px;border-radius:50%;background:#1B1B1B;color:#F3F0E8;display:flex;align-items:center;justify-content:center;font:600 13px/1 Jost,sans-serif">9</span><span style="font:500 13px/1 Jost,sans-serif;letter-spacing:.28em;text-transform:uppercase">the process</span></div>
+<h2 style="margin:0 0 18px;font:700 64px/1.02 Jost,sans-serif;letter-spacing:-.03em">judgment and rewriting<br>are separate jobs.</h2>
+<p style="margin:0 0 44px;max-width:700px;font:400 19px/1.5 Jost,sans-serif">Most AI writing tools mix these together. They see a possible problem and immediately start rewriting. Ernest-Faulkner separates them. The process is closer to this:</p>
+<div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;font:500 11px/1 Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase"><span style="width:14px;height:12px;background:#F0B323;clip-path:polygon(50% 0,100% 100%,0 100%)"></span>judgment</div>
+<div style="position:relative">
+<div style="position:absolute;left:21px;top:36px;bottom:36px;width:4px;background:#1B1B1B"></div>
+<div style="position:relative;display:grid;grid-template-columns:46px 340px minmax(0,1fr);gap:28px;align-items:center;padding:13px 0"><div style="width:46px;height:46px;border-radius:50%;background:#1B1B1B;color:#fff;display:flex;align-items:center;justify-content:center;font:600 17px/1 Jost,sans-serif">1</div><div style="font:600 20px/1.2 Jost,sans-serif">Observe the text.</div><div style="font:400 16px/1.4 Jost,sans-serif;color:#5b5955">What is actually happening?</div></div>
+<div style="position:relative;display:grid;grid-template-columns:46px 340px minmax(0,1fr);gap:28px;align-items:center;padding:13px 0"><div style="width:46px;height:46px;border-radius:50%;background:#D63A2F;color:#fff;display:flex;align-items:center;justify-content:center;font:600 17px/1 Jost,sans-serif">2</div><div style="font:600 20px/1.2 Jost,sans-serif">Identify the possible reader cost.</div><div style="font:400 16px/1.4 Jost,sans-serif;color:#5b5955">What makes this harder, slower, less precise, or less effective?</div></div>
+<div style="position:relative;display:grid;grid-template-columns:46px 340px minmax(0,1fr);gap:28px;align-items:center;padding:13px 0"><div style="width:46px;height:46px;border-radius:50%;background:#2452A6;color:#fff;display:flex;align-items:center;justify-content:center;font:600 17px/1 Jost,sans-serif">3</div><div style="font:600 20px/1.2 Jost,sans-serif">Identify the possible gain.</div><div style="font:400 16px/1.4 Jost,sans-serif;color:#5b5955">What might the writer be getting in return?</div></div>
+<div style="position:relative;display:grid;grid-template-columns:46px 340px minmax(0,1fr);gap:28px;align-items:center;padding:13px 0"><div style="width:46px;height:46px;border-radius:50%;background:#F0B323;color:#1B1B1B;display:flex;align-items:center;justify-content:center;font:600 17px/1 Jost,sans-serif">4</div><div style="font:600 20px/1.2 Jost,sans-serif">Make the strongest case for leaving it alone.</div><div></div></div>
+<div style="position:relative;display:grid;grid-template-columns:46px 340px minmax(0,1fr);gap:28px;align-items:center;padding:13px 0"><div style="width:46px;height:46px;border-radius:50%;background:#F3F0E8;border:3px solid #1B1B1B;box-sizing:border-box;display:flex;align-items:center;justify-content:center;font:600 17px/1 Jost,sans-serif">5</div><div style="font:600 20px/1.2 Jost,sans-serif">Decide whether there is really a problem.</div><div></div></div>
+<div style="position:relative;display:grid;grid-template-columns:46px 340px minmax(0,1fr);gap:28px;align-items:center;padding:13px 0"><div style="width:46px;height:46px;border-radius:50%;background:#F3F0E8;border:3px solid #1B1B1B;box-sizing:border-box;display:flex;align-items:center;justify-content:center;font:600 17px/1 Jost,sans-serif">6</div><div style="font:600 20px/1.2 Jost,sans-serif">Decide whether intervention is justified.</div><div></div></div>
+<div style="position:relative;display:grid;grid-template-columns:46px 340px minmax(0,1fr);gap:28px;align-items:center;padding:13px 0"><div style="width:46px;height:46px;border-radius:50%;background:#1B1B1B;color:#fff;display:flex;align-items:center;justify-content:center;font:600 17px/1 Jost,sans-serif">7</div><div style="font:600 20px/1.2 Jost,sans-serif">Define exactly what may be changed.</div><div></div></div>
+</div>
+<div style="margin:32px 0;position:relative;height:12px;background:#1B1B1B"><span style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:#F3F0E8;border:3px solid #1B1B1B;border-radius:999px;padding:7px 16px;font:500 11px/1 Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase;white-space:nowrap">the boundary</span></div>
+<div style="display:grid;grid-template-columns:46px minmax(0,1fr);gap:28px;align-items:center">
+<div style="width:46px;height:46px;background:#D63A2F"></div>
+<div><div style="font:500 11px/1 Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#5b5955;margin-bottom:8px">rewriting · a separate job</div><div style="font:600 24px/1.2 Jost,sans-serif;letter-spacing:-.01em">Only then can a revision system touch the prose.</div></div>
+</div>
+<div style="margin-top:48px;background:#1B1B1B;color:#F3F0E8;padding:30px 36px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:center">
+<div style="font:600 26px/1.2 Jost,sans-serif;letter-spacing:-.01em">that boundary matters.</div>
+<p style="margin:0;font:400 16px/1.5 Jost,sans-serif;color:#d9d5cb">It keeps the AI from turning every editorial observation into a rewrite.</p>
+</div>
+</div>
+
+<div data-screen-label="10 Revision checks" style="padding:72px 112px 80px;border-top:8px solid #1B1B1B">
+<div style="display:flex;align-items:center;gap:14px;margin-bottom:28px"><span style="width:30px;height:30px;border-radius:50%;background:#1B1B1B;color:#F3F0E8;display:flex;align-items:center;justify-content:center;font:600 13px/1 Jost,sans-serif">10</span><span style="font:500 13px/1 Jost,sans-serif;letter-spacing:.28em;text-transform:uppercase">revision checks</span></div>
+<h2 style="margin:0 0 18px;font:700 64px/1.02 Jost,sans-serif;letter-spacing:-.03em">even a good revision<br>can fail.</h2>
+<p style="margin:0 0 44px;max-width:700px;font:400 19px/1.5 Jost,sans-serif">Suppose the engine finds an unclear pronoun. It fixes the pronoun. Good. But the new sentence also changes who is responsible for the action. That revision fails.</p>
+<div style="border:3px solid #1B1B1B">
+<div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr) 140px;border-bottom:3px solid #1B1B1B;font:500 11px/1 Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase"><div style="padding:14px 22px;border-right:3px solid #1B1B1B;display:flex;align-items:center;gap:8px"><span style="width:10px;height:10px;border-radius:50%;background:#2452A6"></span>the fix</div><div style="padding:14px 22px;border-right:3px solid #1B1B1B;display:flex;align-items:center;gap:8px"><span style="width:10px;height:10px;background:#D63A2F"></span>what it broke</div><div style="padding:14px 22px">result</div></div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr) 140px;border-bottom:2px solid #1B1B1B;align-items:stretch"><div style="padding:20px 22px;border-right:3px solid #1B1B1B;font:500 18px/1.35 Jost,sans-serif">It fixes an unclear pronoun.</div><div style="padding:20px 22px;border-right:3px solid #1B1B1B;font:400 17px/1.4 Jost,sans-serif">The new sentence changes who is responsible for the action.</div><div style="padding:20px 22px;font:700 26px/1 Jost,sans-serif;color:#D63A2F;display:flex;align-items:center">fails.</div></div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr) 140px;border-bottom:2px solid #1B1B1B;align-items:stretch"><div style="padding:20px 22px;border-right:3px solid #1B1B1B;font:500 18px/1.35 Jost,sans-serif">It makes the sentence clearer.</div><div style="padding:20px 22px;border-right:3px solid #1B1B1B;font:400 17px/1.4 Jost,sans-serif">It removes a joke.</div><div style="padding:20px 22px;font:700 26px/1 Jost,sans-serif;color:#D63A2F;display:flex;align-items:center">fails.</div></div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr) 140px;align-items:stretch"><div style="padding:20px 22px;border-right:3px solid #1B1B1B;font:500 18px/1.35 Jost,sans-serif">It shortens a paragraph.</div><div style="padding:20px 22px;border-right:3px solid #1B1B1B;font:400 17px/1.4 Jost,sans-serif">It destroys a phrase that returns at the end of the chapter.</div><div style="padding:20px 22px;font:700 26px/1 Jost,sans-serif;color:#D63A2F;display:flex;align-items:center">fails.</div></div>
+</div>
+<div style="margin-top:48px;background:#F0B323;padding:36px 40px 40px;display:grid;grid-template-columns:250px minmax(0,1fr);gap:36px;align-items:start">
+<div style="font:600 28px/1.12 Jost,sans-serif;letter-spacing:-.01em">every revision is checked against what must survive</div>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px 20px">
+<div style="display:flex;align-items:center;gap:10px;font:500 17px/1.2 Jost,sans-serif"><span style="flex:none;width:16px;height:16px;border:3px solid #1B1B1B;box-sizing:border-box"></span>meaning</div>
+<div style="display:flex;align-items:center;gap:10px;font:500 17px/1.2 Jost,sans-serif"><span style="flex:none;width:16px;height:16px;border:3px solid #1B1B1B;box-sizing:border-box"></span>facts</div>
+<div style="display:flex;align-items:center;gap:10px;font:500 17px/1.2 Jost,sans-serif"><span style="flex:none;width:16px;height:16px;border:3px solid #1B1B1B;box-sizing:border-box"></span>agency</div>
+<div style="display:flex;align-items:center;gap:10px;font:500 17px/1.2 Jost,sans-serif"><span style="flex:none;width:16px;height:16px;border:3px solid #1B1B1B;box-sizing:border-box"></span>attribution</div>
+<div style="display:flex;align-items:center;gap:10px;font:500 17px/1.2 Jost,sans-serif"><span style="flex:none;width:16px;height:16px;border:3px solid #1B1B1B;box-sizing:border-box"></span>certainty</div>
+<div style="display:flex;align-items:center;gap:10px;font:500 17px/1.2 Jost,sans-serif"><span style="flex:none;width:16px;height:16px;border:3px solid #1B1B1B;box-sizing:border-box"></span>causality</div>
+<div style="display:flex;align-items:center;gap:10px;font:500 17px/1.2 Jost,sans-serif"><span style="flex:none;width:16px;height:16px;border:3px solid #1B1B1B;box-sizing:border-box"></span>scope</div>
+<div style="display:flex;align-items:center;gap:10px;font:500 17px/1.2 Jost,sans-serif"><span style="flex:none;width:16px;height:16px;border:3px solid #1B1B1B;box-sizing:border-box"></span>voice</div>
+<div style="display:flex;align-items:center;gap:10px;font:500 17px/1.2 Jost,sans-serif"><span style="flex:none;width:16px;height:16px;border:3px solid #1B1B1B;box-sizing:border-box"></span>rhythm</div>
+<div style="display:flex;align-items:center;gap:10px;font:500 17px/1.2 Jost,sans-serif"><span style="flex:none;width:16px;height:16px;border:3px solid #1B1B1B;box-sizing:border-box"></span>humor</div>
+<div style="display:flex;align-items:center;gap:10px;font:500 17px/1.2 Jost,sans-serif"><span style="flex:none;width:16px;height:16px;border:3px solid #1B1B1B;box-sizing:border-box"></span>emotional posture</div>
+<div style="display:flex;align-items:center;gap:10px;font:500 17px/1.2 Jost,sans-serif"><span style="flex:none;width:16px;height:16px;border:3px solid #1B1B1B;box-sizing:border-box"></span>ambiguity</div>
+<div style="display:flex;align-items:center;gap:10px;font:500 17px/1.2 Jost,sans-serif"><span style="flex:none;width:16px;height:16px;border:3px solid #1B1B1B;box-sizing:border-box"></span>character</div>
+<div style="display:flex;align-items:center;gap:10px;font:500 17px/1.2 Jost,sans-serif"><span style="flex:none;width:16px;height:16px;border:3px solid #1B1B1B;box-sizing:border-box"></span>motifs and callbacks</div>
+</div>
+</div>
+<div style="margin-top:40px;display:grid;grid-template-columns:170px minmax(0,1fr);border-top:3px solid #1B1B1B">
+<div style="padding:24px 0;border-bottom:2px solid #1B1B1B;font:500 11px/1.3 Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#5b5955">the goal is not simply</div>
+<div style="padding:18px 0;border-bottom:2px solid #1B1B1B;font:600 26px/1.2 Jost,sans-serif;color:#5b5955;text-decoration:line-through;text-decoration-color:#D63A2F;text-decoration-thickness:3px">did the sentence improve?</div>
+<div style="padding:24px 0;font:500 11px/1.3 Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase">it is</div>
+<div style="padding:18px 0;font:700 30px/1.18 Jost,sans-serif;letter-spacing:-.01em">did we solve the identified problem without breaking anything that was already working?</div>
+</div>
+</div>
+
+<div data-screen-label="11 Silence" style="padding:72px 112px 80px;border-top:8px solid #1B1B1B">
+<div style="display:flex;align-items:center;gap:14px;margin-bottom:28px"><span style="width:30px;height:30px;border-radius:50%;background:#1B1B1B;color:#F3F0E8;display:flex;align-items:center;justify-content:center;font:600 13px/1 Jost,sans-serif">11</span><span style="font:500 13px/1 Jost,sans-serif;letter-spacing:.28em;text-transform:uppercase">silence</span></div>
+<h2 style="margin:0 0 18px;font:700 64px/1.02 Jost,sans-serif;letter-spacing:-.03em">the engine is allowed<br>to say nothing.</h2>
+<p style="margin:0 0 44px;max-width:700px;font:400 19px/1.5 Jost,sans-serif">Most software feels useful only when it produces output, so writing tools tend to generate lots of suggestions. Ernest-Faulkner treats silence as a valid editorial decision.</p>
+<div style="border-top:3px solid #1B1B1B">
+<div style="display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:32px;align-items:center;padding:26px 0;border-bottom:2px solid #1B1B1B"><div style="font:400 20px/1.4 Jost,sans-serif">If a sentence is unusual but working</div><div style="display:flex;align-items:center;gap:18px"><span style="flex:none;width:30px;height:30px;border-radius:50%;border:4px solid #1B1B1B;box-sizing:border-box"></span><span style="font:700 36px/1 Jost,sans-serif;letter-spacing:-.02em">no action.</span></div></div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:32px;align-items:center;padding:26px 0;border-bottom:2px solid #1B1B1B"><div style="font:400 20px/1.4 Jost,sans-serif">If the evidence is weak</div><div style="display:flex;align-items:center;gap:18px"><span style="flex:none;width:30px;height:30px;border-radius:50%;border:4px solid #1B1B1B;box-sizing:border-box"></span><span style="font:700 36px/1 Jost,sans-serif;letter-spacing:-.02em">no action.</span></div></div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:32px;align-items:center;padding:26px 0;border-bottom:2px solid #1B1B1B"><div style="font:400 20px/1.4 Jost,sans-serif">If the issue is merely preference</div><div style="display:flex;align-items:center;gap:18px"><span style="flex:none;width:30px;height:30px;border-radius:50%;border:4px solid #1B1B1B;box-sizing:border-box"></span><span style="font:700 36px/1 Jost,sans-serif;letter-spacing:-.02em">no action.</span></div></div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:32px;align-items:center;padding:26px 0;border-bottom:2px solid #1B1B1B"><div style="font:400 20px/1.4 Jost,sans-serif">If the engine cannot tell whether the writer intended something</div><div style="display:flex;align-items:center;gap:18px"><span style="flex:none;width:34px;height:30px;background:#F0B323;clip-path:polygon(50% 0,100% 100%,0 100%)"></span><span style="font:700 36px/1 Jost,sans-serif;letter-spacing:-.02em">ask a question.</span></div></div>
+</div>
+<div style="margin-top:48px;display:grid;grid-template-columns:8px 1fr;gap:28px"><div style="background:#D63A2F"></div><div style="font:600 30px/1.2 Jost,sans-serif;letter-spacing:-.01em;max-width:720px">the engine is not trying to prove its value by constantly touching the prose.</div></div>
+</div>
+
+<div data-screen-label="12 Governed rules" style="padding:72px 112px 80px;border-top:8px solid #1B1B1B">
+<div style="display:flex;align-items:center;gap:14px;margin-bottom:28px"><span style="width:30px;height:30px;border-radius:50%;background:#1B1B1B;color:#F3F0E8;display:flex;align-items:center;justify-content:center;font:600 13px/1 Jost,sans-serif">12</span><span style="font:500 13px/1 Jost,sans-serif;letter-spacing:.28em;text-transform:uppercase">governed rules</span></div>
+<h2 style="margin:0 0 18px;font:700 64px/1.02 Jost,sans-serif;letter-spacing:-.03em">its rules are governed,<br>not hidden in prompts.</h2>
+<p style="margin:0 0 44px;max-width:700px;font:400 19px/1.5 Jost,sans-serif">Most AI editing systems rely heavily on prompts. That leaves a huge amount of editorial policy hidden inside the model. Ernest-Faulkner is being built differently.</p>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:32px;align-items:stretch">
+<div style="display:flex;flex-direction:column">
+<div style="font:500 11px/1 Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#5b5955;margin-bottom:14px">a typical editing prompt</div>
+<div style="flex:1;border:3px dashed #1B1B1B;padding:26px 28px;display:flex;flex-direction:column;justify-content:space-between;gap:24px"><div style="font:500 22px/1.35 Jost,sans-serif">“Act as an expert editor. Improve clarity, style, flow, and readability.”</div><div style="display:flex;align-items:center;gap:10px;font:400 14px/1.4 Jost,sans-serif;color:#5b5955"><span style="flex:none;width:12px;height:12px;background:#D63A2F"></span>the editorial policy stays hidden inside the model</div></div>
+</div>
+<div style="display:flex;flex-direction:column">
+<div style="font:500 11px/1 Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase;margin-bottom:14px">every ernest-faulkner rule has</div>
+<div style="flex:1;border:3px solid #1B1B1B;display:grid;grid-template-columns:1fr 1fr">
+<div style="padding:16px 18px;border-right:2px solid #1B1B1B;border-bottom:2px solid #1B1B1B;display:flex;align-items:center;gap:12px;font:500 16px/1.25 Jost,sans-serif"><span style="flex:none;width:12px;height:12px;background:#1B1B1B"></span>a name</div>
+<div style="padding:16px 18px;border-bottom:2px solid #1B1B1B;display:flex;align-items:center;gap:12px;font:500 16px/1.25 Jost,sans-serif"><span style="flex:none;width:12px;height:12px;background:#1B1B1B"></span>a version</div>
+<div style="padding:16px 18px;border-right:2px solid #1B1B1B;border-bottom:2px solid #1B1B1B;display:flex;align-items:center;gap:12px;font:500 16px/1.25 Jost,sans-serif"><span style="flex:none;width:12px;height:12px;border-radius:50%;background:#2452A6"></span>evidence requirements</div>
+<div style="padding:16px 18px;border-bottom:2px solid #1B1B1B;display:flex;align-items:center;gap:12px;font:500 16px/1.25 Jost,sans-serif"><span style="flex:none;width:12px;height:12px;border-radius:50%;background:#2452A6"></span>exceptions</div>
+<div style="padding:16px 18px;border-right:2px solid #1B1B1B;border-bottom:2px solid #1B1B1B;display:flex;align-items:center;gap:12px;font:500 16px/1.25 Jost,sans-serif"><span style="flex:none;width:12px;height:12px;background:#D63A2F"></span>known false positives</div>
+<div style="padding:16px 18px;border-bottom:2px solid #1B1B1B;display:flex;align-items:center;gap:12px;font:500 16px/1.25 Jost,sans-serif"><span style="flex:none;width:12px;height:12px;border-radius:50%;background:#2452A6"></span>successful counterexamples</div>
+<div style="padding:16px 18px;border-right:2px solid #1B1B1B;display:flex;align-items:center;gap:12px;font:500 16px/1.25 Jost,sans-serif"><span style="flex:none;width:14px;height:12px;background:#F0B323;clip-path:polygon(50% 0,100% 100%,0 100%)"></span>a risk level</div>
+<div style="padding:16px 18px;display:flex;align-items:center;gap:12px;font:500 16px/1.25 Jost,sans-serif"><span style="flex:none;width:12px;height:12px;border:2px solid #1B1B1B;box-sizing:border-box"></span>limits on what it is allowed to change</div>
+</div>
+</div>
+</div>
+<div style="margin-top:48px;border-top:3px solid #1B1B1B;padding-top:28px;display:grid;grid-template-columns:250px minmax(0,1fr);gap:32px;align-items:start">
+<div><div style="font:500 11px/1 Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#5b5955">a rule cannot simply say</div><div style="margin-top:14px;font:700 34px/1.1 Jost,sans-serif;letter-spacing:-.02em;color:#5b5955;text-decoration:line-through;text-decoration-color:#D63A2F;text-decoration-thickness:4px">avoid repetition.</div></div>
+<div><div style="font:500 11px/1 Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase">it has to know the difference between</div>
+<div style="margin-top:16px;display:flex;flex-wrap:wrap;gap:10px;align-items:center">
+<span style="display:inline-flex;align-items:center;gap:8px;border:2px solid #1B1B1B;border-radius:999px;padding:8px 14px;font:500 15px/1 Jost,sans-serif"><span style="width:10px;height:10px;background:#D63A2F"></span>useless repetition</span>
+<span style="font:500 15px/1 Jost,sans-serif;padding:0 4px">and</span>
+<span style="display:inline-flex;align-items:center;gap:8px;border:2px solid #1B1B1B;border-radius:999px;padding:8px 14px;font:500 15px/1 Jost,sans-serif"><span style="width:10px;height:10px;border-radius:50%;background:#2452A6"></span>a refrain</span>
+<span style="display:inline-flex;align-items:center;gap:8px;border:2px solid #1B1B1B;border-radius:999px;padding:8px 14px;font:500 15px/1 Jost,sans-serif"><span style="width:10px;height:10px;border-radius:50%;background:#2452A6"></span>a rhythm</span>
+<span style="display:inline-flex;align-items:center;gap:8px;border:2px solid #1B1B1B;border-radius:999px;padding:8px 14px;font:500 15px/1 Jost,sans-serif"><span style="width:10px;height:10px;border-radius:50%;background:#2452A6"></span>a legal requirement</span>
+<span style="display:inline-flex;align-items:center;gap:8px;border:2px solid #1B1B1B;border-radius:999px;padding:8px 14px;font:500 15px/1 Jost,sans-serif"><span style="width:10px;height:10px;border-radius:50%;background:#2452A6"></span>a technical term</span>
+<span style="display:inline-flex;align-items:center;gap:8px;border:2px solid #1B1B1B;border-radius:999px;padding:8px 14px;font:500 15px/1 Jost,sans-serif"><span style="width:10px;height:10px;border-radius:50%;background:#2452A6"></span>deliberate emotional insistence</span>
+</div></div>
+</div>
+<div style="margin-top:44px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px">
+<div style="border-top:3px solid #1B1B1B;padding-top:14px;font:600 19px/1.3 Jost,sans-serif">the rules can be tested.</div>
+<div style="border-top:3px solid #1B1B1B;padding-top:14px;font:600 19px/1.3 Jost,sans-serif">they can be challenged.</div>
+<div style="border-top:3px solid #1B1B1B;padding-top:14px;font:600 19px/1.3 Jost,sans-serif">they can be changed without silently changing the whole system.</div>
+</div>
+</div>
+
+<div data-screen-label="13 The test corpus" style="padding:72px 112px 80px;border-top:8px solid #1B1B1B">
+<div style="display:flex;align-items:center;gap:14px;margin-bottom:28px"><span style="width:30px;height:30px;border-radius:50%;background:#1B1B1B;color:#F3F0E8;display:flex;align-items:center;justify-content:center;font:600 13px/1 Jost,sans-serif">13</span><span style="font:500 13px/1 Jost,sans-serif;letter-spacing:.28em;text-transform:uppercase">the test corpus</span></div>
+<h2 style="margin:0 0 18px;font:700 64px/1.02 Jost,sans-serif;letter-spacing:-.03em">it has a test system<br>built before the editor.</h2>
+<div style="display:flex;gap:24px;align-items:flex-start;margin-bottom:44px;flex-wrap:wrap">
+<p style="margin:0;max-width:620px;font:400 19px/1.5 Jost,sans-serif">This may be the biggest technical difference. We are not building the editor first and then asking whether it seems smart. We are building the test system before the final editorial intelligence.</p>
+<span style="display:inline-flex;align-items:center;gap:8px;border:2px solid #1B1B1B;border-radius:999px;padding:5px 12px;font:500 11px/1 Jost,sans-serif;letter-spacing:.16em;text-transform:uppercase;white-space:nowrap;margin-top:6px"><span style="width:8px;height:8px;border-radius:50%;background:#F0B323"></span>growing gold-standard corpus</span>
+</div>
+<div style="font:500 11px/1 Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase;margin-bottom:16px">it already contains cases such as</div>
+<div style="border:3px solid #1B1B1B">
+<div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);border-bottom:3px solid #1B1B1B;font:500 11px/1 Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase"><div style="padding:14px 22px;border-right:3px solid #1B1B1B;display:flex;align-items:center;gap:8px"><span style="width:10px;height:10px;border-radius:50%;background:#2452A6"></span>good writing it must leave alone</div><div style="padding:14px 22px;display:flex;align-items:center;gap:8px"><span style="width:10px;height:10px;background:#D63A2F"></span>real problems it must catch</div></div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);border-bottom:2px solid #1B1B1B"><div style="padding:18px 22px;border-right:3px solid #1B1B1B;font:500 17px/1.4 Jost,sans-serif">Repetition that is necessary</div><div style="padding:18px 22px;font:500 17px/1.4 Jost,sans-serif">Repetition that is wasteful</div></div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);border-bottom:2px solid #1B1B1B"><div style="padding:18px 22px;border-right:3px solid #1B1B1B;font:500 17px/1.4 Jost,sans-serif">Productive ambiguity that must survive</div><div style="padding:18px 22px;font:500 17px/1.4 Jost,sans-serif">False precision that must be corrected</div></div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);border-bottom:2px solid #1B1B1B"><div style="padding:18px 22px;border-right:3px solid #1B1B1B;font:500 17px/1.4 Jost,sans-serif">Strong anger that is justified</div><div style="padding:18px 22px;font:500 17px/1.4 Jost,sans-serif">Strong anger that outruns the evidence</div></div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);border-bottom:2px solid #1B1B1B"><div style="padding:18px 22px;border-right:3px solid #1B1B1B;font:500 17px/1.4 Jost,sans-serif">Associative prose that is coherent</div><div style="padding:18px 22px;font:500 17px/1.4 Jost,sans-serif">Associative prose that has lost the thread</div></div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);border-bottom:2px solid #1B1B1B"><div style="padding:18px 22px;border-right:3px solid #1B1B1B;font:500 17px/1.4 Jost,sans-serif">A long sentence that must not be shortened</div><div style="padding:18px 22px;font:500 17px/1.4 Jost,sans-serif">A local sentence that works but becomes annoying when repeated across a document</div></div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)"><div style="padding:18px 22px;border-right:3px solid #1B1B1B;font:500 17px/1.4 Jost,sans-serif">A passive sentence that should stay passive</div><div style="padding:18px 22px;font:500 17px/1.4 Jost,sans-serif">A revision that fixes one problem and creates a worse one</div></div>
+</div>
+<div style="margin-top:40px;background:#1B1B1B;color:#F3F0E8;padding:30px 36px;font:600 26px/1.25 Jost,sans-serif;letter-spacing:-.01em">the system is tested not only on whether it finds problems.<br><span style="color:#F0B323">it is tested on whether it leaves good writing alone.</span></div>
+</div>
+
+<div data-screen-label="14 The difference" style="padding:72px 112px 80px;border-top:8px solid #1B1B1B">
+<div style="display:flex;align-items:center;gap:14px;margin-bottom:28px"><span style="width:30px;height:30px;border-radius:50%;background:#1B1B1B;color:#F3F0E8;display:flex;align-items:center;justify-content:center;font:600 13px/1 Jost,sans-serif">14</span><span style="font:500 13px/1 Jost,sans-serif;letter-spacing:.28em;text-transform:uppercase">the difference</span></div>
+<h2 style="margin:0 0 18px;font:700 64px/1.02 Jost,sans-serif;letter-spacing:-.03em">that changes what<br>“better AI editing” means.</h2>
+<p style="margin:0 0 44px;max-width:700px;font:400 19px/1.5 Jost,sans-serif">Ernest-Faulkner takes a different path from the one AI writing tools have followed. It tries to build better editorial judgment. That is a much harder problem.</p>
+<div style="display:grid;grid-template-columns:160px minmax(0,1fr);gap:16px 24px;align-items:center">
+<div style="font:500 11px/1.3 Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#5b5955">the normal path</div>
+<div style="display:flex;align-items:center;gap:12px">
+<div style="flex:1;border:3px solid #1B1B1B;padding:16px 18px;font:500 17px/1.25 Jost,sans-serif">better generation</div>
+<svg width="26" height="14" style="flex:none"><path d="M0 7 H16" style="fill:none;stroke:#1B1B1B;stroke-width:3px"></path><path d="M14 1 L25 7 L14 13 Z" style="fill:#1B1B1B"></path></svg>
+<div style="flex:1;border:3px solid #1B1B1B;padding:16px 18px;font:500 17px/1.25 Jost,sans-serif">better rewriting</div>
+<svg width="26" height="14" style="flex:none"><path d="M0 7 H16" style="fill:none;stroke:#1B1B1B;stroke-width:3px"></path><path d="M14 1 L25 7 L14 13 Z" style="fill:#1B1B1B"></path></svg>
+<div style="flex:1.4;border:3px solid #1B1B1B;padding:16px 18px;font:500 17px/1.25 Jost,sans-serif">better imitation of a human editor</div>
+</div>
+<div style="display:flex;align-items:center;gap:8px;font:500 11px/1.3 Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase"><span style="flex:none;width:14px;height:12px;background:#1B1B1B;clip-path:polygon(50% 0,100% 100%,0 100%)"></span>ernest-faulkner</div>
+<div style="background:#F0B323;padding:20px 22px;font:700 30px/1.1 Jost,sans-serif;letter-spacing:-.02em">better editorial judgment.</div>
+</div>
+<div style="margin-top:48px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:3px solid #1B1B1B;border-left:3px solid #1B1B1B">
+<div style="border-right:3px solid #1B1B1B;border-bottom:3px solid #1B1B1B;padding:24px 22px 26px"><div style="font:500 11px/1 Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#5b5955;margin-bottom:12px">a co-writer asks</div><div style="font:600 22px/1.25 Jost,sans-serif">What should we write?</div></div>
+<div style="border-right:3px solid #1B1B1B;border-bottom:3px solid #1B1B1B;padding:24px 22px 26px"><div style="font:500 11px/1 Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#5b5955;margin-bottom:12px">a rewriting tool asks</div><div style="font:600 22px/1.25 Jost,sans-serif">How can I make this sound better?</div></div>
+<div style="border-right:3px solid #1B1B1B;border-bottom:3px solid #1B1B1B;padding:24px 22px 26px"><div style="font:500 11px/1 Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#5b5955;margin-bottom:12px">a grammar tool asks</div><div style="font:600 22px/1.25 Jost,sans-serif">Does this follow standard rules?</div></div>
+<div style="grid-column:1 / -1;border-right:3px solid #1B1B1B;border-bottom:3px solid #1B1B1B;background:#1B1B1B;color:#F3F0E8;padding:30px 32px 34px;display:grid;grid-template-columns:190px minmax(0,1fr);gap:28px">
+<div style="display:flex;flex-direction:column;gap:16px"><span style="width:44px;height:38px;background:#F0B323;clip-path:polygon(50% 0,100% 100%,0 100%)"></span><span style="font:500 11px/1.3 Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#F0B323">ernest-faulkner asks</span></div>
+<div style="display:flex;flex-direction:column;gap:10px;font:500 22px/1.3 Jost,sans-serif">
+<div>What is this passage trying to accomplish?</div>
+<div>What does this choice cost?</div>
+<div>What does it gain?</div>
+<div>Is the tradeoff working?</div>
+<div style="margin-top:10px;font:700 34px/1.12 Jost,sans-serif;letter-spacing:-.02em;color:#F0B323">And have I earned the right to interfere?</div>
+</div>
+</div>
+</div>
+<p style="margin:28px 0 0;max-width:700px;font:400 17px/1.5 Jost,sans-serif">That last question is what makes the engine fundamentally different.</p>
+</div>
+
+<div data-screen-label="Closing" style="background:#F0B323;color:#1B1B1B;padding:88px 112px 96px;border-top:8px solid #1B1B1B">
+<div style="display:flex;align-items:center;gap:14px;margin-bottom:36px"><span style="width:30px;height:26px;background:#1B1B1B;clip-path:polygon(50% 0,100% 100%,0 100%)"></span><span style="font:500 13px/1 Jost,sans-serif;letter-spacing:.28em;text-transform:uppercase">the burden of proof</span></div>
+<div style="font:700 52px/1.06 Jost,sans-serif;letter-spacing:-.035em;max-width:856px">the writer does not have to prove that a strange sentence deserves to survive.</div>
+<div style="margin-top:32px;background:#1B1B1B;color:#F3F0E8;padding:28px 32px 32px;font:700 44px/1.08 Jost,sans-serif;letter-spacing:-.03em">the editor has to prove that changing it is justified.</div>
+<p style="margin:36px 0 0;max-width:700px;font:400 19px/1.5 Jost,sans-serif">That is the Ernest-Faulkner Engine. Not AI writing and editing — editorial judgment, from a machine with a human editor’s mindset.</p>
+<div style="margin-top:56px;display:flex;align-items:center;gap:24px"><div style="width:56px;height:56px;border-radius:50%;background:#2452A6"></div><div style="width:60px;height:52px;background:#D63A2F;clip-path:polygon(50% 0,100% 100%,0 100%)"></div><div style="width:52px;height:52px;background:#1B1B1B"></div><div style="flex:1;height:4px;background:#1B1B1B"></div></div>
+<div style="margin-top:36px;font:600 34px/1.2 Jost,sans-serif;letter-spacing:-.02em;max-width:900px">AI can rewrite a sentence. ernest-faulkner decides when and how.</div>
+</div>
+
+<div data-screen-label="Footer" style="background:#1B1B1B;color:#F3F0E8;padding:36px 112px 40px;display:flex;flex-direction:column;gap:22px">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:32px">
+<div style="display:flex;align-items:center;gap:14px;white-space:nowrap">
+<svg width="34" height="24"><path d="M4 22 L17 3 L30 22" style="fill:none;stroke:#F3F0E8;stroke-width:6px"></path></svg>
+<span style="font:600 15px/1 Jost,sans-serif;letter-spacing:.42em">ATMA</span>
+<span style="margin-left:8px;font:500 10px/1 Jost,sans-serif;letter-spacing:.24em;color:#a9a59b">MARKETER · AUTHOR · SYSTEMS ENGINEER</span>
+</div>
+<div style="display:flex;align-items:center;gap:28px;white-space:nowrap"><a href="/atma_os.html" style="font:500 13px/1 Jost,sans-serif;letter-spacing:.12em;color:#F3F0E8;text-decoration:none" style-hover="color:#F0B323">← atmaOS</a><span style="font:500 13px/1 Jost,sans-serif;letter-spacing:.12em">atma.marketing</span></div>
+</div>
+<div style="border-top:2px solid #5b5955;padding-top:18px;font:400 13px/1.5 Jost,sans-serif;color:#a9a59b;max-width:720px">Ernest-Faulkner is in development. The figures describe the engine’s design and its first evaluation corpus, not audited results.</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;fitToWidth&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Layout&quot;},&quot;imageTreatment&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;original&quot;,&quot;duotone&quot;,&quot;mono&quot;],&quot;default&quot;:&quot;original&quot;,&quot;tsType&quot;:&quot;'original' | 'duotone' | 'mono'&quot;,&quot;section&quot;:&quot;Hero image&quot;}}">
+class Component extends DCLogic {
+  state = { vw: typeof window !== 'undefined' ? window.innerWidth : 1080 };
+  componentDidMount() {
+    this._onResize = () => this.setState({ vw: window.innerWidth });
+    window.addEventListener('resize', this._onResize);
+    this._onResize();
+  }
+  componentWillUnmount() { window.removeEventListener('resize', this._onResize); }
+  renderVals() {
+    const fit = this.props.fitToWidth ?? true;
+    const zoom = fit ? Math.min(1, Math.max(0.3, this.state.vw / 1080)) : 1;
+    const t = this.props.imageTreatment ?? 'original';
+    return {
+      zoom: Number(zoom.toFixed(4)),
+      imgOriginal: t === 'original',
+      imgMono: t === 'mono',
+      imgDuotone: t === 'duotone'
+    };
+  }
+}
+</script>
+</body>
+</html>
