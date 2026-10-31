@@ -45,9 +45,13 @@
 DirectoryIndex index.html
 AddDefaultCharset UTF-8
 
-# ---- 4. Force HTTPS (optional — uncomment once your SSL is active) ----
-# <IfModule mod_rewrite.c>
-#   RewriteEngine On
-#   RewriteCond %{HTTPS} off
-#   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-# </IfModule>
+
+# ---- Force HTTPS and the bare hostname (website_ops audit 2026-10-31) ----
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  # Keep AutoSSL certificate validation reachable over http
+  RewriteRule ^\.well-known/acme-challenge/ - [L]
+  RewriteCond %{HTTPS} !=on [OR]
+  RewriteCond %{HTTP_HOST} !^atma\.marketing$ [NC]
+  RewriteRule ^ https://atma.marketing%{REQUEST_URI} [L,R=301]
+</IfModule>
