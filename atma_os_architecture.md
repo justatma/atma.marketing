@@ -24,9 +24,9 @@ Focuses on my books, research, ideas, and editorial work: developing my thinking
 ### Branch two: the agency (the marketing architecture)
 Uses the same shared foundation to support AI product managers, designers, copywriters, developers, advertising experts, and analysts. They draw on approved knowledge, work together on projects, and build a lasting record of their decisions and results. See [Growth Bastards](https://growthbastards.com/).
 
-## 2. Inside the agency: fifteen personas, always learning
+## 2. Inside the agency: fourteen personas, always learning
 
-The agency is [Growth Bastards](https://growthbastards.com/): fifteen AI specialists led by one human CMO. They are built from three streams of knowledge, which keep them current and keep them sharp.
+The agency is [Growth Bastards](https://growthbastards.com/): fourteen AI specialists led by one human CMO. They are built from three streams of knowledge, which keep them current and keep them sharp.
 
 - **Curated knowledge sets:** approved material each persona draws on.
 - **Ongoing academic studies:** continuing research, folded into what they know.

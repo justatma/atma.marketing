@@ -52,7 +52,7 @@ It also had to support the wider work of being an author: developing books, prep
 
 **One brain:** the knowledge and experience that first inspired atmaOS, shared by both branches. The agency is a major extension of the vision, not its origin.
 
-[See the whole architecture at a glance →](/atma_os_architecture.html): both branches, the fifteen, and the engines in one picture.
+[See the whole architecture at a glance →](/atma_os_architecture.html): both branches, the fourteen, and the engines in one picture.
 
 ## 5. The larger vision
 **An extension of my life's work. Not a copy of my mind.** AtmaOS is a developing digital extension of my intellectual and professional life. It is designed to preserve more than 20 years of writing and experience, make that knowledge available to AI, and support new work without losing the history behind it.
@@ -102,11 +102,11 @@ AtmaOS does not simply give an AI everything it knows. For each task, the compil
 Keep the history. Change a decision by making a new decision, not by hiding the old one. If an idea turns out to be wrong, the original stays in the record and the correction is added with its evidence.
 
 ## 8. The specialist intelligences
-**One editor. Fifteen agency roles.** Each specialist has a lasting identity, a main job, a set of work rules, and a history of past work. The AI model running it may change; the specialist's records and role do not have to disappear. *(Planned team.)*
+**One editor. Fourteen agency roles.** Each specialist has a lasting identity, a main job, a set of work rules, and a history of past work. The AI model running it may change; the specialist's records and role do not have to disappear. *(Planned team.)*
 
 **Author branch: [Ernest-Faulkner](/ernest-faulkner).** An AI editorial expert. Its job is to study writing, find problems, weigh evidence, and suggest improvements across books, essays, notes, manuscripts, claims, and earlier drafts. It does not own the books or change them on its own. It makes findings and proposals. The approved editing process controls what becomes final.
 
-**Agency branch: fifteen role types.** Executive orchestrator (assigns work, tracks progress, brings specialists together) · head of product · design thinking director · UX/UI design lead · senior copywriter · brand and campaign designer · principal frontend engineer · principal backend engineer · paid media director · Google Ads strategist · Meta Ads strategist · LinkedIn Ads strategist · Bayesian analytics lead (weighs the evidence and tests, keeps the uncertainty visible) · SEO and organic growth lead · quality and accessibility lead. The team can grow: new roles can be added without creating a new atmaOS.
+**Agency branch: fourteen role types.** Executive orchestrator (assigns work, tracks progress, brings specialists together) · head of product · design thinking director · UX/UI design lead · senior copywriter · brand and campaign designer · principal developer/engineer · paid media director · Google Ads strategist · Meta Ads strategist · LinkedIn Ads strategist · Bayesian analytics lead (weighs the evidence and tests, keeps the uncertainty visible) · SEO and organic growth lead · quality and accessibility lead. The team can grow: new roles can be added without creating a new atmaOS.
 
 They work across roles, without losing their own roles. Working together does not mean every agent gets every permission. A copywriter may help plan an ad test; that does not mean the copywriter can spend money on the ad account.
 
