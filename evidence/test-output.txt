@@ -1,0 +1,48 @@
+LOCAL VERIFICATION OUTPUT
+Collected 19 November 2026. AI-assisted local execution, not independent certification.
+Working copies, commands, and limitations are recorded in verification.json.
+
+
+Council
+Command: venv/bin/python -m pytest tests -q -p no:cacheprovider
+Observed HEAD: 8d55fc6b762d3c9ba6a9cc6ac2b21347b4236fc7
+Working changes present: True
+Exit status: 0
+
+........................................................................ [ 40%]
+........................................................................ [ 81%]
+................................                                         [100%]
+176 passed in 0.81s
+
+
+Bayesian Marketing Decision Engine
+Command: .venv/bin/python -m pytest tests/unit/p9 -q -p no:cacheprovider
+Observed HEAD: 9665dea07bc656cf9233d282be344a256c82bf4c
+Working changes present: False
+Exit status: 0
+
+..................                                                       [100%]
+18 passed in 1.14s
+
+
+Edge Hunter
+Command: venv/bin/python -m pytest tests/unit/test_verifier_pure.py -q -p no:cacheprovider
+Observed HEAD: 26fa2d754104322f022bdf641cb95233fb111b58
+Working changes present: True
+Exit status: 0
+
+........................................................................ [ 85%]
+............                                                             [100%]
+84 passed in 0.09s
+
+
+Project Management
+Command: python3 -m unittest discover -s tests -q
+Observed HEAD: 1e01bd39c67751c71a7b6f81c58f0ab0ca3a868b
+Working changes present: True
+Exit status: 0
+
+----------------------------------------------------------------------
+Ran 21 tests in 1.079s
+
+OK

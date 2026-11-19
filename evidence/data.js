@@ -1,0 +1,318 @@
+const PORTAL_EVIDENCE = {
+  "schema_version": 2,
+  "projects": [
+    {
+      "project_id": "council",
+      "project_name": "Council",
+      "observed_at": "2026-11-19T05:33:33.551536+00:00",
+      "observed_date": "2026-11-19",
+      "commit": "8d55fc6b762d3c9ba6a9cc6ac2b21347b4236fc7",
+      "dirty": true,
+      "status": "passed",
+      "command": "venv/bin/python -m pytest tests -q -p no:cacheprovider",
+      "passed_count": 176,
+      "exit_code": 0,
+      "selected_source_hashes": [
+        {
+          "path": "council.py",
+          "sha256": "f2d9eaa5c3a517134972982ae09304ea2cc6588b987484ebd4913524fa3317c7"
+        },
+        {
+          "path": "tests/test_council_setup.py",
+          "sha256": "6638c07e871602450624b81c9e14c1f413512e71fabd7d96ea34eaa5925683b3"
+        },
+        {
+          "path": "tests/test_effort_and_budgets.py",
+          "sha256": "4d7f17ef4d4d30143f6716855e53bde2bdeec1417d798f6aabd7ea1576cdf8a8"
+        }
+      ],
+      "head_stable": true,
+      "selected_sources_stable": true,
+      "limits": "Selected local checks only. No deployment or live-operation certification."
+    },
+    {
+      "project_id": "bayesian",
+      "project_name": "Bayesian Analytical Engine",
+      "observed_at": "2026-11-19T05:33:33.552846+00:00",
+      "observed_date": "2026-11-19",
+      "commit": "9665dea07bc656cf9233d282be344a256c82bf4c",
+      "dirty": false,
+      "status": "passed",
+      "command": ".venv/bin/python -m pytest tests/unit/p9 -q -p no:cacheprovider",
+      "passed_count": 18,
+      "exit_code": 0,
+      "selected_source_hashes": [
+        {
+          "path": "src/bayesian_marketing/decision/stopping.py",
+          "sha256": "0ca709f2cd9f463dfead5e6c061e92225b74c62891e008ea32bc281b1a2e5255"
+        },
+        {
+          "path": "src/bayesian_marketing/decision/allocation.py",
+          "sha256": "e5179522b337a39587c4b749adf3b210c1dec5a0f29d1c6ac44d294d2b785890"
+        },
+        {
+          "path": "tests/unit/p9/test_p9_units.py",
+          "sha256": "6712c554f6c407ee2042a2a7d4183e12dc5ad35df376071e5e9e8a526385cd4d"
+        }
+      ],
+      "head_stable": true,
+      "selected_sources_stable": true,
+      "limits": "Selected local checks only. No deployment or live-operation certification."
+    },
+    {
+      "project_id": "atmaos",
+      "project_name": "AtmaOS Core",
+      "observed_at": "2026-11-19T05:33:33.552988+00:00",
+      "observed_date": "2026-11-19",
+      "commit": "d9da8d7b4faee79798f1af061192a147ead6dd7d",
+      "dirty": true,
+      "status": "implementation_inspected",
+      "command": null,
+      "passed_count": null,
+      "exit_code": null,
+      "selected_source_hashes": [
+        {
+          "path": "src/atmaos/core/policy/engine.py",
+          "sha256": "96872ca914a3574f2ac32b3e40f7068430f1545d647617ec231343588153b5ed"
+        },
+        {
+          "path": "src/atmaos/core/runtime/pipeline.py",
+          "sha256": "b7cbf6840ad8c806700d78fcee90b04e34460bb97103cfe105a2fdd38f924543"
+        },
+        {
+          "path": "tests/scope/test_authority.py",
+          "sha256": "e1a9bf969aae92ccbd6ff908e3b363f70ae1c6e641f04861976f2d5a30b750dc"
+        }
+      ],
+      "head_stable": true,
+      "selected_sources_stable": true,
+      "limits": "This entry records the initial source inspection. See additional_evidence for the separately verified GitHub workflow and newer source inspection."
+    },
+    {
+      "project_id": "edge_hunter",
+      "project_name": "Edge Hunter",
+      "observed_at": "2026-11-19T05:33:33.555868+00:00",
+      "observed_date": "2026-11-19",
+      "commit": "26fa2d754104322f022bdf641cb95233fb111b58",
+      "dirty": true,
+      "status": "passed",
+      "command": "venv/bin/python -m pytest tests/unit/test_verifier_pure.py -q -p no:cacheprovider",
+      "passed_count": 84,
+      "exit_code": 0,
+      "selected_source_hashes": [
+        {
+          "path": "scanner/compliance/guard.py",
+          "sha256": "3a92a1291003b970f363da0c856722ec3b004bce3ad5af4a152e491bc4264e1c"
+        },
+        {
+          "path": "scanner/rules/verifier_impl.py",
+          "sha256": "4ec6099cdccfdd4e28d6dfa5b84e7dc972318037055c0cc3ed7c2dde8430aca8"
+        },
+        {
+          "path": "tests/unit/test_verifier_pure.py",
+          "sha256": "1565695cf87cb3a0820e0241548b87f1174ddbf54846da2eb4049dc17006c890"
+        }
+      ],
+      "head_stable": true,
+      "selected_sources_stable": true,
+      "limits": "Selected local checks only. No deployment or live-operation certification."
+    },
+    {
+      "project_id": "project_management",
+      "project_name": "Project Management",
+      "observed_at": "2026-11-19T05:33:33.640766+00:00",
+      "observed_date": "2026-11-19",
+      "commit": "1e01bd39c67751c71a7b6f81c58f0ab0ca3a868b",
+      "dirty": true,
+      "status": "passed",
+      "command": "python3 -m unittest discover -s tests -q",
+      "passed_count": 21,
+      "exit_code": 0,
+      "selected_source_hashes": [
+        {
+          "path": "evidence_store.py",
+          "sha256": "53e1ca2cf32f9c5f9e5edf553d384026c11548bdb0da50421c74848201d11f0a"
+        },
+        {
+          "path": "tests/test_evidence.py",
+          "sha256": "1f43fea50781dc150bf4e8b74297bfc5856abb8924ce3bea09d3984db7191b3a"
+        },
+        {
+          "path": "README.md",
+          "sha256": "7a598bf05b53fb13d87eabc67547573c197662925667681c440db8073937e606"
+        }
+      ],
+      "head_stable": true,
+      "selected_sources_stable": true,
+      "limits": "Selected local checks only. No deployment or live-operation certification."
+    },
+    {
+      "project_id": "boswell",
+      "project_name": "Boswell Engine",
+      "observed_at": "2026-11-19T06:51:25.259320+00:00",
+      "observed_date": "2026-11-19",
+      "commit": "d1dda62cd7e69970fc80d781318593bcad543c93",
+      "dirty": true,
+      "status": "implementation_inspected",
+      "command": null,
+      "passed_count": null,
+      "exit_code": null,
+      "selected_source_hashes": [
+        {
+          "path": "run_compiler.py",
+          "sha256": "6d2ded381e2109d5f624d5bad63a64a1c8cf83a1b73747e2d9728cdfdf082d7b"
+        },
+        {
+          "path": "compiler/engine.py",
+          "sha256": "f1629c8dfedad203652005e10aa6d11ff44d556a8d5e6706df6a0781725c3273"
+        },
+        {
+          "path": "compiler/contracts.py",
+          "sha256": "9aefcbb0171c1d1976c9ea33d4d3a111dffb45f89e5f6abfb4299e4fd3990012"
+        },
+        {
+          "path": "compiler/instruments/s4_register_architecture.py",
+          "sha256": "0022493061737494f5a251f686ff04c57f421209a1619bc44dcda533d6283518"
+        },
+        {
+          "path": "compiler/instruments/s5_causal_statements.py",
+          "sha256": "07a230c94f2ed83ec71f82f569ce67c7a5d6989144e5ee05a9d5d6bb3055a9dd"
+        },
+        {
+          "path": "compiler/instruments/s6_independent_recurrence.py",
+          "sha256": "0f3ebd6a6b45a4b3147f0ab7fc3e834e6de4bd78acf59fa4e59d80776fc77273"
+        }
+      ],
+      "limits": "Source inspection and the public writing study are separate evidence types, with their own scope."
+    }
+  ],
+  "limitations": [
+    "Local commands, source inspection, owner-provided operational status, and historical GitHub runs are identified separately.",
+    "Tests apply to their recorded working copies or revisions. Selected-file hashes are not a complete repository snapshot.",
+    "Business outcomes, output comparisons, and software checks answer different questions; the record identifies which evidence was collected.",
+    "Private client material and source code are excluded from this public export."
+  ],
+  "additional_evidence": [
+    {
+      "project_id": "council",
+      "observed_at": "2026-11-19T06:51:25.259320+00:00",
+      "kind": "source_inspection",
+      "commit": "8d55fc6b762d3c9ba6a9cc6ac2b21347b4236fc7",
+      "dirty": true,
+      "selected_source_hashes": [
+        {
+          "path": "config.py",
+          "sha256": "b630444ff1263cabb7570179f6865f18e79b35d1a666fe245191cbb092ce0b4c"
+        },
+        {
+          "path": "agents/agent_base.py",
+          "sha256": "15158a79245da82837b0c971877fa8020b9ee33b0c7e65c2f022d1ab177ae6cb"
+        },
+        {
+          "path": "dialectics/protocol.py",
+          "sha256": "a9c65e3afa765073796b76059ac5f6ae3544a1930418f3796cfd6e67491c7559"
+        },
+        {
+          "path": "documents/dialectics_vc_first_five_scorecard.md",
+          "sha256": "e9943cb10ec73a841d041e3ab9f198de97665730bba8c3eb61c5b1cb3cd8174f"
+        },
+        {
+          "path": "documents/dialectics_runs/vc_launch_governance_20260719-020220.md",
+          "sha256": "3e672d0bb155b298824e57cab0735c132eb39aa31646b923c1acc347e3d632d0"
+        }
+      ]
+    },
+    {
+      "project_id": "atmaos",
+      "observed_at": "2026-11-19T06:51:25.259320+00:00",
+      "kind": "source_inspection",
+      "commit": "7f719220dbdc55b991e88d10afd539d47fa375f0",
+      "dirty": true,
+      "selected_source_hashes": [
+        {
+          "path": "src/atmaos/core/context/compiler.py",
+          "sha256": "3a72853cf7240aece6121d9713df3aa23023d72ee3d61f532c8fd7bfbe548739"
+        },
+        {
+          "path": "src/atmaos/core/memory/evidence.py",
+          "sha256": "fc2ecc19ddbf55f27f6c65cfed22837018fd86614a0b01ec72c527c89c5ae003"
+        },
+        {
+          "path": "src/atmaos/core/runtime/durability.py",
+          "sha256": "22f7fa7165f9b186e821fb367aff35c3f66ed4d05cd448011e1c3b07c8bb89d3"
+        },
+        {
+          "path": ".github/workflows/tests.yml",
+          "sha256": "1fad5865f6b6ed4a27c913b921fa98c0fe7f2b52ff02dd76a202fc3b935427d8"
+        }
+      ]
+    },
+    {
+      "project_id": "boswell",
+      "observed_at": "2026-11-19T06:51:25.259320+00:00",
+      "kind": "source_inspection",
+      "commit": "d1dda62cd7e69970fc80d781318593bcad543c93",
+      "dirty": true,
+      "selected_source_hashes": [
+        {
+          "path": "run_compiler.py",
+          "sha256": "6d2ded381e2109d5f624d5bad63a64a1c8cf83a1b73747e2d9728cdfdf082d7b"
+        },
+        {
+          "path": "compiler/engine.py",
+          "sha256": "f1629c8dfedad203652005e10aa6d11ff44d556a8d5e6706df6a0781725c3273"
+        },
+        {
+          "path": "compiler/contracts.py",
+          "sha256": "9aefcbb0171c1d1976c9ea33d4d3a111dffb45f89e5f6abfb4299e4fd3990012"
+        },
+        {
+          "path": "compiler/instruments/s4_register_architecture.py",
+          "sha256": "0022493061737494f5a251f686ff04c57f421209a1619bc44dcda533d6283518"
+        },
+        {
+          "path": "compiler/instruments/s5_causal_statements.py",
+          "sha256": "07a230c94f2ed83ec71f82f569ce67c7a5d6989144e5ee05a9d5d6bb3055a9dd"
+        },
+        {
+          "path": "compiler/instruments/s6_independent_recurrence.py",
+          "sha256": "0f3ebd6a6b45a4b3147f0ab7fc3e834e6de4bd78acf59fa4e59d80776fc77273"
+        }
+      ]
+    },
+    {
+      "project_id": "atmaos",
+      "kind": "github_workflow",
+      "run_id": 43620393431,
+      "run_date": "2026-11-14",
+      "head_sha": "6625d4cd9b35406d825dba4814ca5dcbcf7c9162",
+      "conclusion": "success",
+      "test_jobs": 8,
+      "python_versions": [
+        "3.12",
+        "3.13"
+      ],
+      "parts": [
+        "agency_a",
+        "agency_hw",
+        "agency_inflow",
+        "rest"
+      ],
+      "observed_at": "2026-11-19T06:51:25.259320+00:00",
+      "scope": "Historical run at its recorded revision. Current workflow uses manual dispatch."
+    },
+    {
+      "project_id": "bayesian",
+      "kind": "owner_operational_statement",
+      "observed_date": "2026-11-19",
+      "statement": "An active campaign is flowing through the engine.",
+      "source": "Atma, in this portal review conversation"
+    },
+    {
+      "project_id": "boswell",
+      "kind": "public_study",
+      "url": "https://boswell.atma.marketing/white-paper.html",
+      "scope": "Internal B2B writing comparison; same writer; three prospects; two AI judges; six assessments favoring the engine-supported output."
+    }
+  ]
+};
