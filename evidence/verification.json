@@ -4,10 +4,10 @@
     {
       "project_id": "council",
       "project_name": "Council",
-      "observed_at": "2026-11-19T05:33:33.551536+00:00",
+      "observed_at": "2026-11-19T07:20:00+00:00",
       "observed_date": "2026-11-19",
-      "commit": "8d55fc6b762d3c9ba6a9cc6ac2b21347b4236fc7",
-      "dirty": true,
+      "commit": "4a9618d878d68d71232d4becf3a91647324d5379",
+      "dirty": false,
       "status": "passed",
       "command": "venv/bin/python -m pytest tests -q -p no:cacheprovider",
       "passed_count": 176,
@@ -33,7 +33,7 @@
     {
       "project_id": "bayesian",
       "project_name": "Bayesian Analytical Engine",
-      "observed_at": "2026-11-19T05:33:33.552846+00:00",
+      "observed_at": "2026-11-19T07:20:00+00:00",
       "observed_date": "2026-11-19",
       "commit": "9665dea07bc656cf9233d282be344a256c82bf4c",
       "dirty": false,
@@ -62,10 +62,10 @@
     {
       "project_id": "atmaos",
       "project_name": "AtmaOS Core",
-      "observed_at": "2026-11-19T05:33:33.552988+00:00",
+      "observed_at": "2026-11-19T07:20:00+00:00",
       "observed_date": "2026-11-19",
-      "commit": "d9da8d7b4faee79798f1af061192a147ead6dd7d",
-      "dirty": true,
+      "commit": "696a718a689e2650c2c1626d40b18fa8e46b3150",
+      "dirty": false,
       "status": "implementation_inspected",
       "command": null,
       "passed_count": null,
@@ -91,10 +91,10 @@
     {
       "project_id": "edge_hunter",
       "project_name": "Edge Hunter",
-      "observed_at": "2026-11-19T05:33:33.555868+00:00",
+      "observed_at": "2026-11-19T07:20:00+00:00",
       "observed_date": "2026-11-19",
-      "commit": "26fa2d754104322f022bdf641cb95233fb111b58",
-      "dirty": true,
+      "commit": "ee2c4c610398ed572ea1171be97203f52285de53",
+      "dirty": false,
       "status": "passed",
       "command": "venv/bin/python -m pytest tests/unit/test_verifier_pure.py -q -p no:cacheprovider",
       "passed_count": 84,
@@ -120,10 +120,10 @@
     {
       "project_id": "project_management",
       "project_name": "Project Management",
-      "observed_at": "2026-11-19T05:33:33.640766+00:00",
+      "observed_at": "2026-11-19T07:20:00+00:00",
       "observed_date": "2026-11-19",
       "commit": "1e01bd39c67751c71a7b6f81c58f0ab0ca3a868b",
-      "dirty": true,
+      "dirty": false,
       "status": "passed",
       "command": "python3 -m unittest discover -s tests -q",
       "passed_count": 21,
@@ -149,10 +149,10 @@
     {
       "project_id": "boswell",
       "project_name": "Boswell Engine",
-      "observed_at": "2026-11-19T06:51:25.259320+00:00",
+      "observed_at": "2026-11-19T07:20:00+00:00",
       "observed_date": "2026-11-19",
-      "commit": "d1dda62cd7e69970fc80d781318593bcad543c93",
-      "dirty": true,
+      "commit": "7243405065465711a84acc882407a78f789dff27",
+      "dirty": false,
       "status": "implementation_inspected",
       "command": null,
       "passed_count": null,
@@ -195,10 +195,10 @@
   "additional_evidence": [
     {
       "project_id": "council",
-      "observed_at": "2026-11-19T06:51:25.259320+00:00",
+      "observed_at": "2026-11-19T07:20:00+00:00",
       "kind": "source_inspection",
-      "commit": "8d55fc6b762d3c9ba6a9cc6ac2b21347b4236fc7",
-      "dirty": true,
+      "commit": "4a9618d878d68d71232d4becf3a91647324d5379",
+      "dirty": false,
       "selected_source_hashes": [
         {
           "path": "config.py",
@@ -220,14 +220,15 @@
           "path": "documents/dialectics_runs/vc_launch_governance_20260719-020220.md",
           "sha256": "3e672d0bb155b298824e57cab0735c132eb39aa31646b923c1acc347e3d632d0"
         }
-      ]
+      ],
+      "observed_date": "2026-11-19"
     },
     {
       "project_id": "atmaos",
-      "observed_at": "2026-11-19T06:51:25.259320+00:00",
+      "observed_at": "2026-11-19T07:20:00+00:00",
       "kind": "source_inspection",
-      "commit": "7f719220dbdc55b991e88d10afd539d47fa375f0",
-      "dirty": true,
+      "commit": "696a718a689e2650c2c1626d40b18fa8e46b3150",
+      "dirty": false,
       "selected_source_hashes": [
         {
           "path": "src/atmaos/core/context/compiler.py",
@@ -245,14 +246,15 @@
           "path": ".github/workflows/tests.yml",
           "sha256": "1fad5865f6b6ed4a27c913b921fa98c0fe7f2b52ff02dd76a202fc3b935427d8"
         }
-      ]
+      ],
+      "observed_date": "2026-11-19"
     },
     {
       "project_id": "boswell",
-      "observed_at": "2026-11-19T06:51:25.259320+00:00",
+      "observed_at": "2026-11-19T07:20:00+00:00",
       "kind": "source_inspection",
-      "commit": "d1dda62cd7e69970fc80d781318593bcad543c93",
-      "dirty": true,
+      "commit": "7243405065465711a84acc882407a78f789dff27",
+      "dirty": false,
       "selected_source_hashes": [
         {
           "path": "run_compiler.py",
@@ -278,7 +280,8 @@
           "path": "compiler/instruments/s6_independent_recurrence.py",
           "sha256": "0f3ebd6a6b45a4b3147f0ab7fc3e834e6de4bd78acf59fa4e59d80776fc77273"
         }
-      ]
+      ],
+      "observed_date": "2026-11-19"
     },
     {
       "project_id": "atmaos",
