@@ -18,3 +18,23 @@ body.brief{font-family:var(--font-body);background:var(--paper);border-top:8px s
 .brand{display:inline-flex;flex-shrink:0;align-items:center;line-height:1}.brand-mark{display:block;width:44px;height:44px}@media(max-width:740px){.brand-mark{width:40px;height:40px}}
 
 .boswell-feature{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;border-top:3px solid var(--ink);padding:32px 0}.boswell-feature h3{font:600 34px/1.1 var(--font-display)}.boswell-feature p{font-size:17px}.evidence-item .evidence-meaning{color:var(--ink)}.evidence-item .evidence-actions{display:flex;gap:18px;flex-wrap:wrap;margin:18px 0}.evidence-actions button{border:0;padding:0;background:none;text-decoration:underline;text-underline-offset:4px;color:var(--deep-teal);font-family:var(--font-body);font-size:16px}.evidence-actions a{color:var(--deep-teal);font-size:16px}.evidence-item details p{font-size:14px}.dialog-body .output-box{padding:20px;border-left:5px solid var(--deep-teal);background:var(--sheet)}.brief .example-block{padding:20px;border-left:5px solid var(--deep-teal);background:var(--sheet)}@media(max-width:740px){.boswell-feature{grid-template-columns:1fr;gap:0}.boswell-feature h3{font-size:30px}}
+
+/* Source excerpts retain their original pixel dimensions; only display sizing changes. */
+.source-excerpt{width:100%;max-width:1260px;margin:20px 0 24px;break-inside:avoid}
+.excerpt-scroll{width:100%;max-width:100%;overflow-x:auto;overscroll-behavior-x:contain;border:1px solid var(--ink);background:var(--ink)}
+.excerpt-scroll:focus-visible{outline:3px solid var(--deep-teal);outline-offset:3px}
+.excerpt-scroll img{display:block;width:100%;min-width:700px;max-width:none;height:auto}
+.source-excerpt figcaption{margin-top:12px;font:14px/1.5 var(--font-body);color:var(--ink-muted)}
+@media print{
+ .source-excerpt{max-width:100%;break-inside:avoid;page-break-inside:avoid}
+ .excerpt-scroll{overflow:visible;border:0}
+ .excerpt-scroll img{width:100%;min-width:0;max-width:100%;height:auto}
+ .source-excerpt figcaption{font-size:9pt;line-height:1.4}
+ body:has(#detail[open])>header,body:has(#detail[open])>main,body:has(#detail[open])>footer,body:has(#detail[open])>.skip{display:none!important}
+ body:has(#detail[open]) #detail[open]{display:block!important;position:static;width:100%;max-width:none;max-height:none;overflow:visible;border:0;margin:0;padding:0}
+ body:has(#detail[open]) #detail::backdrop{display:none}
+ body:has(#detail[open]) .dialog-head{display:none}
+ body:has(#detail[open]) .dialog-body{padding:0}
+}
+
+.brief code{overflow-wrap:anywhere;word-break:break-word;white-space:normal}

@@ -72,6 +72,14 @@ const PORTAL_CASES = {
       "GitHub records a successful test workflow on 14 November 2026, including database-backed test jobs on Python 3.12 and 3.13.",
       "Current source and the historical test run are identified separately in the downloadable evidence record."
     ],
+    "evidence_excerpt": {
+      "after": 0,
+      "src": "images/01-authority-test.png",
+      "width": 2520,
+      "height": 900,
+      "alt": "Sixteen lines of Python test code from tests/scope/test_authority.py.",
+      "caption": "Excerpt from the authority tests. A task allowed only to observe asks to propose and then to run a tool. The test requires the policy engine to refuse both under rule 10.6."
+    },
     "anchors": [
       "src/atmaos/core/context/compiler.py",
       "src/atmaos/core/memory/evidence.py",
